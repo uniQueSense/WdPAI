@@ -13,6 +13,14 @@ body {
     justify-content: center;
     align-items: center;
 }
+.container1 {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: transparent radial-gradient(closest-side at 51% 100%, #800000 0%, #130000 100%) 0% 0% no-repeat padding-box;
+    display: flex;
+    flex-direction: column;
+}
 .curtain {
     z-index: 1;
     position: absolute;
@@ -61,6 +69,33 @@ button:hover {
     color:  white;
 }
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+  }
+  .menu{
+    width: 100%;
+    border-bottom: 2px solid white;
+  }
+
+
 @media only screen and (max-device-width: 420px){
     .container {
         flex-direction: column;
@@ -78,5 +113,9 @@ button:hover {
 
     .logo {
         height: 28em;
+    }
+
+    .form { 
+        margin: auto;
     }
 }
