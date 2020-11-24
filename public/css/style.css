@@ -1,24 +1,82 @@
 
-body{
+body {
     margin: 0;
+    overflow: hidden;
 }
-.container{
+.container {
+    margin: 0;
     width: 100vw;
     height: 100vh;
     background: transparent radial-gradient(closest-side at 51% 100%, #800000 0%, #130000 100%) 0% 0% no-repeat padding-box;
-    
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    /*align-items: center;*/
+    align-items: center;
 }
-.curtain{
+.curtain {
     z-index: 1;
     position: absolute;
 }
 
-.logo{
-    z-index: 2; 
+.logo {
+    margin: 0;
+    z-index: 2;
+    height: 50em;
+    padding: 8% 18%;
     position: absolute;
 }
 
+.login_container {
+    z-index: 3;
+    height: 10em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    width: 40vw;
+}
+
+input {
+    padding: 0.5em 3em;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 0.2em solid #2699FB;
+    border-radius: 2.5em;
+    margin: 0.5em;
+}
+
+button {
+    background: #F1F9FF 0% 0% no-repeat padding-box;
+    border: 0.2em solid #BCE0FD;
+    border-radius: 0.7em;
+    padding: 40%;
+    /* transition-duration: 1s;  */
+}
+
+button:hover {
+    background: #500404 0% 0% no-repeat padding-box;
+    color:  white;
+}
+
+@media only screen and (max-device-width: 420px){
+    .container {
+        flex-direction: column;
+        width: 130vw;
+        height: 130vh;
+    }
+
+    * {
+        font-size: 50px;
+    }
+
+    .login_container {
+        height: 3em;
+    }
+
+    .logo {
+        height: 28em;
+    }
+}
