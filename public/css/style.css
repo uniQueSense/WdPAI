@@ -2,7 +2,18 @@
 body {
     margin: 0;
     overflow: hidden;
+    font-family: sans-serif;
+
 }
+
+.col-4 {
+    color: ivory;
+}
+
+.col-8 {
+    align-items: center;
+}
+
 .container {
     margin: 0;
     width: 100vw;
