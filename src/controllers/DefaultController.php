@@ -13,4 +13,9 @@ class DefaultController extends AppController {
     {
         $this->render('projects');
     }
+
+    public function register_0()
+    {
+        $this->render('register_0');
+    }
 }
