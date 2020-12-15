@@ -59,7 +59,7 @@ input {
 }
 
 button {
-    background: #F1F9FF 0% 0% no-repeat padding-box;
+    background: white;
     border: 0.2em solid #BCE0FD;
     border-radius: 0.7em;
     padding: 40%;
@@ -67,8 +67,8 @@ button {
 }
 
 button:hover {
-    background: #500404 0% 0% no-repeat padding-box;
-    color:  white;
+    background: white;
+    color:  black;
 }
 
 ul {
