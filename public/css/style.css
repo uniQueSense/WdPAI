@@ -16,7 +16,7 @@ body {
     margin: 0;
     width: 100vw;
     height: 100vh;
-    background: transparent radial-gradient(closest-side at 51% 100%, #800000 0%, #130000 100%) 0% 0% no-repeat padding-box;
+    background: antiquewhite;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -59,7 +59,7 @@ input {
 }
 
 button {
-    background: #F1F9FF 0% 0% no-repeat padding-box;
+    background: white;
     border: 0.2em solid #BCE0FD;
     border-radius: 0.7em;
     padding: 40%;
@@ -67,8 +67,8 @@ button {
 }
 
 button:hover {
-    background: #500404 0% 0% no-repeat padding-box;
-    color:  white;
+    background: white;
+    color:  black;
 }
 
 ul {
@@ -76,8 +76,6 @@ ul {
     margin: 0;
     padding: 0;
 }
-
-  
 
 
 @media only screen and (max-device-width: 420px){
