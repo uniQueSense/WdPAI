@@ -9,5 +9,8 @@ class SecurityController extends AppController
     {
         $user = new User('tsoprano@gmial.com', 'admin', 'Anthony', 'Soprano');
 
+        var_dump($_POST);
+        die();
+
     }
 }
