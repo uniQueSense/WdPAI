@@ -16,7 +16,7 @@ body {
     margin: 0;
     width: 100vw;
     height: 100vh;
-    background: transparent radial-gradient(closest-side at 51% 100%, #800000 0%, #130000 100%) 0% 0% no-repeat padding-box;
+    background: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -77,7 +77,7 @@ ul {
     padding: 0;
 }
 
-  
+
 
 
 @media only screen and (max-device-width: 420px){
@@ -99,7 +99,7 @@ ul {
         height: 28em;
     }
 
-    .form { 
+    .form {
         margin: auto;
     }
 }
