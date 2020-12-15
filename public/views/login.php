@@ -16,12 +16,19 @@
         </div>
 
         <div class="login_container">
-            <form>
+            <form class="login" action="login" method="POST">
+                <div class="messages">
+                    <?php if(isset($messages)){
+                        foreach ($messages as $message) {
+                            echo $message;
+                        }
+                    }
+                    ?>
+                </div>
                 <input name="email" type="text" placeholder="email@email.com">
                 <input name="password" type="password" placeholder="password">
-                <!-- <input id="rememberChkBox" type="checkbox"> -->
                 <div class="button_login">
-                    <button><i class="fas fa-arrow-right"></i></button>
+                    <button type="submit"><i class="fas fa-arrow-right"></i></button>
                 </div>   
             </form>
         </div>
