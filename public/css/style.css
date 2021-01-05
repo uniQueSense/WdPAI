@@ -34,7 +34,7 @@ body {
 
 .search_place {
     display: flex;
-    height: 60%;
+    height: 20vh;
     align-items: center;
     justify-content: center;
 }
