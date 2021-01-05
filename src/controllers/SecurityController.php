@@ -9,8 +9,25 @@ class SecurityController extends AppController
     {
         $user = new User('tsoprano@gmial.com', 'admin', 'Anthony', 'Soprano');
 
-        var_dump($_POST);
-        die();
+        if ($this->isPost()) {
+            return $this->login('login');
+        }
 
+
+        $email = $_POST["email"];
+        $password = $_POST["password"];
+
+        if ($user->getEmail() !== $email) {
+            return $this->render('login',['messages' => ['Zły email!']]);
+        }
+
+        if ($user->getPassword() !== $password) {
+            return $this->render('login',['messages' => ['Złe hasło!']]);
+        }
+
+        //return $this->render('projects');
+
+        $url = "http://$_SERVER[HTTP_HOST]";
+        header("Location: {$url}/projects");
     }
 }
