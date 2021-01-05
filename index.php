@@ -9,4 +9,7 @@ Router::get('', 'DefaultController');
 Router::get('projects', 'DefaultController');
 Router::get('register', 'DefaultController');
 Router::post('login', 'DefaultController');
+Router::post('search', 'DefaultController');
+Router::post('theatre', 'DefaultController');
+Router::post('aboute', 'DefaultController');
 Router::run($path);

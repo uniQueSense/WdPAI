@@ -7,10 +7,6 @@ body {
     font-family: sans-serif;
 }
 
-.col-4 {
-    color: ivory;
-}
-
 .col-8 {
     justify-content: center;
 }
@@ -72,6 +68,18 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+.headline {
+    display: grid;
+    align-items: center;
+    color: dodgerblue;
+    text-align: center;
+    height: 15%;
+}
+
+.headline h {
+    font-size: 5vh;
 }
 
 
