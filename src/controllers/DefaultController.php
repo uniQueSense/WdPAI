@@ -23,4 +23,13 @@ class DefaultController extends AppController {
     {
         $this->render('search');
     }
+
+    public function aboute()
+    {
+        $this->render('aboute');
+    }
+    public function theatre()
+    {
+        $this->render('theatre');
+    }
 }

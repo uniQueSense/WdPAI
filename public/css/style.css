@@ -23,6 +23,13 @@ body {
     justify-content: center;
     align-items: center;
 }
+.container1 {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
 .button_search {
     /* display: table; */
@@ -95,6 +102,34 @@ ul {
 
 .headline h {
     font-size: 5vh;
+}
+/*<-- Glide.js-->*/
+.play {
+    background: #FFFFFF;
+}
+
+.play h1 {
+    text-align: center;
+}
+
+.play img {
+    height: 80%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.rotate {
+    transform: rotateX(180deg) translateY(-20%);
+    filter: blur(6px);
+
+}
+
+.active .rotate {
+    background: yellow;
+}
+
+.glide__slide--active {
+    background: #2699FB;
 }
 
 
