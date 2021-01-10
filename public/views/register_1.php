@@ -30,7 +30,7 @@
     </nav>
 
 
-    <div class="page_location"><img src="public/img/pasek.svg"></div>
+    <div class="page_location"><img src="public/img/pasek2.svg"></div>
 
 
 </body>

@@ -12,6 +12,7 @@ Router::get('register_1', 'DefaultController');
 Router::get('register_2', 'DefaultController');
 Router::post('login', 'DefaultController');
 Router::post('search', 'DefaultController');
+Router::post('aboute', 'DefaultController');
 Router::post('theatre', 'DefaultController');
 Router::post('booking', 'DefaultController');
 Router::post('spectacl', 'DefaultController');
