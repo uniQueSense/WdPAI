@@ -1,9 +1,9 @@
-</body><!DOCTYPE html>
+<!DOCTYPE html>
 
 <head>
 
     <link rel="stylesheet" type="text/css" href="public/css/menu_style.css">
-    <link rel="stylesheet" type="text/css" href="public/css/register_style.css">
+    <link rel="stylesheet" type="text/css" href="public/css/style_backg.css">
 
     <script type="text/javascript" src="./public/js/script.js" defer></script>
     <script src="https://kit.fontawesome.com/7186f6c2cc.js" crossorigin="anonymous"></script>
@@ -32,6 +32,7 @@
             </ul>
         </nav>
 
+        <div class="idk"><h>Rezerwacja miejsc na spektakl: Spektakl</h></div>
 
         <div class="theatre_room">
 
@@ -40,15 +41,54 @@
             </div>
 
             <div class="booking_places">
-                <a href="#"><div class="armchair"><p>A1</p></div></a>
-                <a href="#"><div class="armchair"><p>A2</p></div></a>
-                <a href="#"><div class="armchair"><p>A3</p></div></a>
-                <a href="#"><div class="armchair"><p>B1</p></div></a>
-                <a href="#"><div class="armchair"><p>B2</p></div></a>
-                <a href="#"><div class="armchair"><p>B3</p></div></a>
-                <a href="#"><div class="armchair"><p>C1</p></div></a>
-                <a href="#"><div class="armchair"><p>C2</p></div></a>
-                <a href="#"><div class="armchair"><p>C3</p></div></a>
+                <div class="row_armchair">
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                </div>
+                <div class="row_armchair">
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                </div>
+                <div class="row_armchair">
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                </div>
+                <div class="row_armchair">
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                </div>
+                <div class="row_armchair">
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                </div>
+                <div class="row_armchair">
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                    <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+                </div>
             </div>
         </div>
 

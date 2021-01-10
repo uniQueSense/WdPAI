@@ -104,6 +104,55 @@ section.spectacl_title {
     opacity: 0;
 }
 
+.idk {
+    display: grid;
+    font-size: 4vh;
+    color: blanchedalmond;
+    justify-items: center;
+    margin-block: 4vh;
+}
+
+.scene {
+    position: relative;
+    display: grid;
+    background-color: gold;
+    height: 5vh;
+    width: 28vh;
+    font-size: 2.5vh;
+    align-content: center;
+    justify-content: center;
+}
+
 .booking_places {
     position: relative;
+    display: grid;
+    height: 28vh;
+    width: 28vh;
+}
+
+.theatre_room {
+    position: relative;
+    display: grid;
+    height: 50%;
+    align-content: center;
+    justify-items: center;
+}
+
+.row_armchair {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.row_armchair>a {
+    position: relative;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    color: deepskyblue;
+}
+
+.armchair {
+
 }
