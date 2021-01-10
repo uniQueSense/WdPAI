@@ -90,6 +90,18 @@
                     <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
                 </div>
             </div>
+
+            <div class="legenda">
+                <h>Legenda</h>
+                <i1 class="fas fa-chair"><p>empty</p></i1>
+                <i2 class="fas fa-chair"><p>full</p></i2>
+                <i3 class="fas fa-chair"><p>active</p></i3>
+
+            </div>
+            <div class="confirme">
+                <button>Zatwierdz</button>
+            </div>
+
         </div>
 
 </body>

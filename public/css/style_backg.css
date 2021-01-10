@@ -156,3 +156,29 @@ section.spectacl_title {
 .armchair {
 
 }
+
+.legenda {
+    position: relative;
+    display: grid;
+    background-color: white;
+    opacity: 0.8;
+    width: 28vh
+}
+
+.legenda>h{
+    position: relative;
+}
+
+.legenda>i1 {
+    color: blue;
+}
+.legenda>i2 {
+    color: chartreuse;
+}
+.legenda>i3 {
+    color: orange;
+}
+
+.legenda>i>p {
+
+}
