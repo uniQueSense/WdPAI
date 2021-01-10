@@ -32,4 +32,20 @@ class DefaultController extends AppController {
     {
         $this->render('theatre');
     }
+    public function booking()
+    {
+        $this->render('booking');
+    }
+    public function register_1()
+    {
+        $this->render('register_1');
+    }
+    public function register_2()
+    {
+        $this->render('register_2');
+    }
+    public function spectacl()
+    {
+        $this->render('spectacl');
+    }
 }

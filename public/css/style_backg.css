@@ -103,3 +103,7 @@ section.spectacl_title {
 ::-webkit-scrollbar {
     opacity: 0;
 }
+
+.booking_places {
+    position: relative;
+}
