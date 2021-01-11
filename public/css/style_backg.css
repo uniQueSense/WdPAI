@@ -153,6 +153,10 @@ section.spectacl_title {
     color: deepskyblue;
 }
 
+.row_armchair>a:hover {
+    color: white;
+}
+
 .armchair {
 
 }
@@ -172,9 +176,11 @@ section.spectacl_title {
 .legenda>i1 {
     color: blue;
 }
+
 .legenda>i2 {
     color: chartreuse;
 }
+
 .legenda>i3 {
     color: orange;
 }

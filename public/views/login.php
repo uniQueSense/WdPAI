@@ -8,11 +8,14 @@
 <body>
     <div class="container">
         <div class="login_container">
+
             <img src="public/img/logo.svg">
+
             <div class="register_info">
                 <t>Nie masz jeszcze konta?</t>
-                <li><a href="register">Zarejestruj się!</a></li>
+                <a href="register">Zarejestruj się!</a>
             </div>
+
             <form class="login" action="login" method="POST">
                 <div class="messages">
                     <?php if(isset($messages)){
@@ -22,11 +25,14 @@
                     }
                     ?>
                 </div>
+
                 <input name="email" type="text" placeholder="email@email.com">
                 <input name="password" type="password" placeholder="password">
+
                 <div class="button_login">
                     <button type="submit"><i class="fas fa-arrow-right"></i></button>
-                </div>   
+                </div>
+
             </form>
         </div>
     </div>

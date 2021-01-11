@@ -23,6 +23,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 .container1 {
     margin: 0;
     width: 100vw;
@@ -56,8 +57,20 @@ form {
     width: 20vw;
     margin-top: 5vh;
     text-align: center;
-    color: dodgerblue;
+    color: #2699FB;
     font-size: 2vh;
+}
+
+.register_info>li {
+    display: grid;
+    color: #2699FB;
+}
+.register_info>a  {
+    color: deepskyblue;
+}
+
+.register_info>a:hover {
+    color: white;
 }
 
 .login input {
