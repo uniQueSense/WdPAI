@@ -40,61 +40,54 @@
                 <div class="glide">
                     <div class="glide__track" data-glide-el="track">
                         <ul class="glide__slides">
+
                             <li class="glide__slide play">
                                 <img src="public/img/example_image.svg" alt="">
-                                <h1>obraz1</h1>
-                                <a href="#">Read more!</a>
-                                <div class="rotate">
-                                    <img src="public/img/example_image.svg" alt="">
+                                <div class="rectangle">
                                     <h1>obraz1</h1>
-                                    <h1>Read more!</h1>
+                                    <a href="#">Read more!</a>
                                 </div>
-                            </li>
-                            <li class="glide__slide play">
-                                <img src="public/img/example_image.svg" alt="">
-                                <h1>obraz1</h1>
-                                <a href="#">Read more!</a>
+
                                 <div class="rotate">
                                     <img src="public/img/example_image.svg" alt="">
-                                    <h1>obraz1</h1>
-                                    <h1>Read more!</h1>
-                                </div>
-                            </li>
-                            <li class="glide__slide play">
-                                <img src="public/img/example_image.svg" alt="">
-                                <h1>obraz1</h1>
-                                <a href="#">Read more!</a>
-                                <div class="rotate">
-                                    <img src="public/img/example_image.svg" alt="">
-                                    <h1>obraz1</h1>
-                                    <h1>Read more!</h1>
-                                </div>
-                            </li>
-                            <li class="glide__slide play">
-                                <img src="public/img/example_image.svg" alt="">
-                                <h1>obraz1</h1>
-                                <a href="#">Read more!</a>
-                                <div class="rotate">
-                                    <img src="public/img/example_image.svg" alt="">
-                                    <h1>obraz1</h1>
-                                    <h1>Read more!</h1>
-                                </div>
-                            </li>
-                            <li class="glide__slide play">
-                                <img src="public/img/example_image.svg" alt="">
-                                <h1>obraz1</h1>
-                                <a href="#">Read more!</a>
-                                <div class="rotate">
-                                    <img src="public/img/example_image.svg" alt="">
-                                    <h1>obraz1</h1>
-                                    <h1>Read more!</h1>
+                                    <div class="rectangle">
+                                        <h1>obraz1</h1>
+                                        <a href="#">Read more!</a>
+                                    </div>
                                 </div>
                             </li>
 
+                            <li class="glide__slide play">
+                                <img src="public/img/example_image.svg" alt="">
+                                <div class="rectangle">
+                                    <h1>obraz1</h1>
+                                    <a href="#">Read more!</a>
+                                </div>
 
-<!--                        <li class="glide__slide"><img src="public/img/balladyna.svg" alt=""></li>-->
-<!--                        <li class="glide__slide"><img src="public/img/biesy.svg" alt=""></li>-->
-<!--                        <li class="glide__slide"><img src="public/img/cabaret.svg" alt=""></li>-->
+                                <div class="rotate">
+                                    <img src="public/img/example_image.svg" alt="">
+                                    <div class="rectangle">
+                                        <h1>obraz1</h1>
+                                        <a href="#">Read more!</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="glide__slide play">
+                                <img src="public/img/example_image.svg" alt="">
+                                <div class="rectangle">
+                                    <h1>obraz1</h1>
+                                    <a href="#">Read more!</a>
+                                </div>
+
+                                <div class="rotate">
+                                    <img src="public/img/example_image.svg" alt="">
+                                    <div class="rectangle">
+                                        <h1>obraz1</h1>
+                                        <a href="#">Read more!</a>
+                                    </div>
+                                </div>
+                            </li>
                         </ul>
                     </div>
 

@@ -9,6 +9,7 @@ body {
 
 .col-8 {
     justify-content: center;
+    margin-top: 5vh;
 }
 
 .container {
@@ -81,17 +82,23 @@ form {
     margin: 0.5em;
 }
 
-button {
+.button_login>button {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    height: 3vh;
+    width: 3vh;
     background: white;
-    border: 0.2em solid #BCE0FD;
+    border: 0.2em solid #2699FB;
     border-radius: 0.7em;
-    padding: 40%;
-    /* transition-duration: 1s;  */
+    font-size: 1.5vh;
 }
 
-button:hover {
-    background: white;
-    color:  black;
+.button_login>button:hover {
+    transition-duration: 0.3s;
+    border-color: white;
+    background-color: #2699FB;
+    color:  white;
 }
 
 ul {
@@ -105,15 +112,16 @@ ul {
     align-items: center;
     color: dodgerblue;
     text-align: center;
-    height: 15%;
+    height: 9%;
 }
 
 .headline h {
-    font-size: 5vh;
+font-size: 5vh;
 }
+
 /*<-- Glide.js-->*/
 .play {
-    background: #FFFFFF;
+
 }
 
 .play h1 {
@@ -128,16 +136,20 @@ ul {
 
 .rotate {
     transform: rotateX(180deg) translateY(-20%);
-    filter: blur(6px);
+    filter: blur(2px);
 
-}
-
-.active .rotate {
-    background: yellow;
 }
 
 .glide__slide--active {
-    background: #2699FB;
+    padding: 3vh;
+    transform: scale(1.13);
+}
+
+.rectangle {
+    display: flow-root;
+    margin: 0;
+    height: 12vh;
+    background-color: deepskyblue;
 }
 
 
