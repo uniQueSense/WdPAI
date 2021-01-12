@@ -152,6 +152,12 @@ font-size: 5vh;
     background-color: deepskyblue;
 }
 
+.glide__slide--active rectangle {
+    padding: 3vh;
+    transform: scale(1.13);
+    background-color: blue;
+}
+
 
 @media only screen and (max-device-width: 420px){
     .container {

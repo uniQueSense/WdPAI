@@ -41,24 +41,55 @@
                     <h2>title</h2>
                 </div>
             </div>
+
             <div id="project-2">
                 <img src="public/img/spectacl1.svg">
                 <div>
                     <h2>title</h2>
                 </div>
             </div>
+
             <div id="project-3">
             <img src="public/img/spectacl1.svg">
             <div>
                 <h2>title</h2>
             </div>
-        </div>
-            <div id="project-4">
-            <img src="public/img/spectacl1.svg">
-            <div>
-                <h2>title</h2>
             </div>
-        </div>
+
+            <div id="project-4">
+                <img src="public/img/spectacl1.svg">
+                <div>
+                    <h2>title</h2>
+                </div>
+            </div>
+
+            <div id="project-5">
+                <img src="public/img/cabaret.svg">
+                <div>
+                    <h2>title</h2>
+                </div>
+            </div>
+
+            <div id="project-5">
+                <img src="public/img/cabaret.svg">
+                <div>
+                    <h2>title</h2>
+                </div>
+            </div>
+
+            <div id="project-5">
+                <img src="public/img/cabaret.svg">
+                <div>
+                    <h2>title</h2>
+                </div>
+            </div>
+
+            <div id="project-5">
+                <img src="public/img/cabaret.svg">
+                <div>
+                    <h2>title</h2>
+                </div>
+            </div>
         </section>
 
         </div>

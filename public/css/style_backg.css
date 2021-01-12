@@ -16,9 +16,9 @@ body {
 
 .search_place {
     display: flex;
-    height: 20vh;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    height: 25%;
 }
 
 .search_place>input {
@@ -84,7 +84,7 @@ section.spectacl_title {
     justify-content: space-around;
     grid-gap: 2em;
     padding: 2em;
-    overflow: scroll;
+    overflow: overlay;
 }
 
 .theatre_list>dl {
