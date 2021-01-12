@@ -20,10 +20,30 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+.search_place>input {
+    height: 2vh;
+    width: 21vh;
+    padding: 0.3vh;
+    margin-right: 0.2vh;
+}
+
 .button1 {
-    background-color: dodgerblue;
+    background-color: deepskyblue;
+    color: white;
+    height: 3vh;
+    width: 8vh;
+    font-size: 1.5vh;
+    margin-left: 0.2vh;
 
 }
+
+.button1:hover {
+    transition-duration: 0.3s;
+    background-color: white;
+    color: deepskyblue;
+}
+
 section.spectacl_title {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

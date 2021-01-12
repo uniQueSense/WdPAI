@@ -29,7 +29,7 @@
 
         <div class="search_place">
             <input name="search" type="text" placeholder="Szukaj">
-            <button class="button button1">Szukaj</button>
+            <button class="button button1">Szukaj przedstawienia</button>
         </div>
 
 
