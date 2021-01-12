@@ -78,12 +78,13 @@ section.spectacl_title {
     justify-content: space-between;
 }
 .theatre_list {
-    display: flex;
+    position: relative;
+    display: list-item;
     flex-direction: column;
     justify-content: space-around;
     grid-gap: 2em;
     padding: 2em;
-    overflow: auto;
+    overflow: scroll;
 }
 
 .theatre_list>dl {
@@ -110,8 +111,10 @@ section.spectacl_title {
     height: 15%;
 }
 .search_theatre>input {
-    height: 3em;
-    width: 20em;
+    height: 2vh;
+    width: 21vh;
+    padding: 0.3vh;
+    margin-right: 0.2vh;
 }
 
 .button_search {
