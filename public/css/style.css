@@ -136,6 +136,7 @@ font-size: 5vh;
 
 .rotate {
     transform: rotateX(180deg) translateY(-20%);
+    opacity: 20%;
     filter: blur(2px);
 
 }
