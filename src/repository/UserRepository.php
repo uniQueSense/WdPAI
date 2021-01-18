@@ -8,7 +8,7 @@ class UserRepository extends Repository
         $stmt = $this->database->connect()->prepare('
             SELECT * FROM public.users WHERE email = :email
         ');
-        $stmt->bindParam(':email', $email, PARAM_STR);
+        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
         $stmt->execute();
 
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -29,7 +29,25 @@ class UserRepository extends Repository
     public function setUser(string $name, string $surname, string $email, string $password, string $city, string $street, int $number) {
 
         $connection = $this->database->connect();
-        $connection->begin
+        if ($connection->beginTransaction()) {
+            $stmt = $connection->prepare('
+            INSERT INTO users (name, surname, email, password)
+            VALUES (:name,:surname,:email,:password)
+            ');
 
+            if (! $stmt->execute([
+                ':name' => $name,
+            ':surname' => $surname,
+            ':email' => $email,
+            ':password' => $password
+            ])) {
+                $connection->rollBack();
+                return;
+            }
+
+            // TODO napisać zeby powstal nowy wiersz w users details
+        }
     }
+
+
 }
