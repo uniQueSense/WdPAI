@@ -1,8 +1,9 @@
 <?php
 
-require_once "config.php";
+require_once 'config.php';
 
 class Database {
+
     private $username;
     private $password;
     private $host;
@@ -16,7 +17,7 @@ class Database {
         $this->database = DATABASE;
     }
 
-    public function connect()
+    public function connect(): PDO
     {
         try {
             $conn = new PDO(

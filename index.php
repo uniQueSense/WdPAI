@@ -16,4 +16,5 @@ Router::post('aboute', 'DefaultController');
 Router::post('theatre', 'DefaultController');
 Router::post('booking', 'DefaultController');
 Router::post('spectacl', 'DefaultController');
+Router::post('test', 'DefaultController');
 Router::run($path);

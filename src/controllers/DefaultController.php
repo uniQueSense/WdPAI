@@ -48,4 +48,8 @@ class DefaultController extends AppController {
     {
         $this->render('spectacl');
     }
+    public function test()
+    {
+        $this->render('test');
+    }
 }

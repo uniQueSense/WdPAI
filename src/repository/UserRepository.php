@@ -25,4 +25,11 @@ class UserRepository extends Repository
             $user['$surname']
         );
     }
+
+    public function setUser(string $name, string $surname, string $email, string $password, string $city, string $street, int $number) {
+
+        $connection = $this->database->connect();
+        $connection->begin
+
+    }
 }
