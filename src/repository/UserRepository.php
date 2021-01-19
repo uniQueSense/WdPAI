@@ -29,6 +29,7 @@ class UserRepository extends Repository
     public function setUser(string $name, string $surname, string $email, string $password, string $city, string $street, int $number) {
 
         $connection = $this->database->connect();
+
         if ($connection->beginTransaction()) {
             $stmt = $connection->prepare('
             INSERT INTO users (name, surname, email, password)
@@ -37,10 +38,10 @@ class UserRepository extends Repository
 
             if (! $stmt->execute([
                 ':name' => $name,
-            ':surname' => $surname,
-            ':email' => $email,
-            ':password' => $password
-            ])) {
+                ':surname' => $surname,
+                ':email' => $email,
+                ':password' => $password])) {
+
                 $connection->rollBack();
                 return;
             }

@@ -11,13 +11,13 @@ const state_img = document.querySelector(".state");
 
 button1.addEventListener("click",function (){
     block1.style.display = "none";
-    block2.style.display = "flex";
+    block2.style.display = "grid";
     state_img.src = "public/img/pasek2.svg";
 });
 
 button2.addEventListener("click",function (){
     block2.style.display = "none";
-    block3.style.display = "flex";
+    block3.style.display = "grid";
     state_img.src = "public/img/pasek3.svg";
 });
 

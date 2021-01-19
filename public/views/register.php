@@ -33,11 +33,6 @@
                         <input name="surname" type="text" placeholder="Kowalski">
                     </div>
 
-                    <div class="login">
-                        <p>Login</p>
-                        <input name="login" type="text" placeholder="janek12345">
-                    </div>
-
                     <div class="email">
                         <p>Email</p>
                         <input name="email" type="text" placeholder="email@email.com">
@@ -71,7 +66,12 @@
 
                     <div class="home_number">
                         <p>Numer domu / (meszkania)</p>
-                        <input name="home_number" type="text" placeholder="13">
+                        <input name="home_number" type="number" placeholder="13"/>
+                    </div>
+
+                    <div class="phone_number">
+                        <p>Numer telefonu</p>
+                        <input name="phone_number" type="tel" placeholder="123456789" min="100000000" max="999999999" required/>
                     </div>
 
                     <div class="button_login">

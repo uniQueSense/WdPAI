@@ -13,12 +13,16 @@ Router::post('loginForm', 'SecurityController');
 Router::post('register', 'RegisterController');
 Router::post('registerForm', 'RegisterController');
 
-
 Router::get('projects', 'DefaultController');
-Router::post('search', 'DefaultController');
-Router::post('aboute', 'DefaultController');
-Router::post('theatre', 'DefaultController');
-Router::post('booking', 'DefaultController');
-Router::post('spectacl', 'DefaultController');
+
+Router::get('search', 'DefaultController');
+
+Router::get('theatre', 'DefaultController');
+Router::get('booking', 'DefaultController');
+Router::get('spectacl', 'DefaultController');
+
+Router::get('aboute', 'DefaultController');
+
 Router::post('test', 'DefaultController');
+
 Router::run($path);

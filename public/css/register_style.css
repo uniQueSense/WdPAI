@@ -52,6 +52,12 @@ p {
     margin: 0;
     color: #2699FB;
 }
+.button_login {
+    display: grid;
+    height: 10vh;
+    align-content: center;
+    justify-content: center;
+}
 button {
     display: grid;
     align-items: center;
@@ -70,16 +76,23 @@ button:hover {
     background-color: #2699FB;
     color:  white;
 }
+
+.card_number{
+    display: grid;
+    justify-items: center;
+}
 .card_number>input {
     width: 100%;
 }
 
 .block2 {
     display: none;
+    justify-items: center;
 }
 
 .block3 {
     display: none;
+    justify-items: center;
 }
 
 
