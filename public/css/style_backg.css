@@ -87,7 +87,7 @@ section.spectacl_title {
     justify-content: space-around;
     grid-gap: 2em;
     padding: 2em;
-    overflow: overlay;
+    overflow: auto;
 }
 
 .theatre_list>dl {
@@ -171,8 +171,8 @@ section.spectacl_title {
 
 .row_armchair>a {
     position: relative;
-    height: -webkit-fill-available;
-    width: -webkit-fill-available;
+    height: 100%;
+    width: 100%;
     display: grid;
     justify-items: center;
     align-content: center;

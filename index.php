@@ -15,16 +15,14 @@ Router::post('logout', 'SecurityController');
 Router::post('register', 'RegisterController');
 Router::post('registerForm', 'RegisterController');
 
-Router::get('projects', 'DefaultController');
+Router::get('search', 'SearchController');
 
-Router::get('search', 'DefaultController');
+Router::get('projects', 'DefaultController');
 
 Router::get('theatre', 'DefaultController');
 Router::get('booking', 'DefaultController');
 Router::get('spectacl', 'DefaultController');
-
 Router::get('aboute', 'DefaultController');
-
 Router::post('test', 'DefaultController');
 
 Router::run($path);

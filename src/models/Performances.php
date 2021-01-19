@@ -1,16 +1,31 @@
 <?php
 
 class Performances {
+    private $id_spectacle;
     private $title;
     private $description;
     private $image;
-    private $cast;
+    private $cost;
 
-    public function __construct($title, $description, $image)
+    public function __construct($id_spectacle, $title, $description, $cost, $image)
     {
+        $this->id_spectacle = $id_spectacle;
         $this->title = $title;
         $this->description = $description;
+        $this->cost = $cost;
         $this->image = $image;
+    }
+
+
+    public function getId()
+    {
+        return $this->id_spectacle;
+    }
+
+
+    public function setId($id_spectacle): void
+    {
+        $this->id_spectacle = $id_spectacle;
     }
 
     public function getTitle()
@@ -43,13 +58,13 @@ class Performances {
         $this->image = $image;
     }
 
-    public function getCast()
+    public function getCost()
     {
-        return $this->cast;
+        return $this->cost;
     }
 
-    public function setCast($image)
+    public function setCost($cost)
     {
-        $this->cast = $image;
+        $this->cost = $cost;
     }
 }

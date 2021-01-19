@@ -2,8 +2,8 @@
 
 require_once 'AppController.php';
 
-class DefaultController extends AppController {
 
+class DefaultController extends AppController {
 
 
     public function projects()
@@ -14,11 +14,6 @@ class DefaultController extends AppController {
     public function register()
     {
         $this->render('register');
-    }
-
-    public function search()
-    {
-        $this->render('search');
     }
 
     public function aboute()
@@ -36,8 +31,13 @@ class DefaultController extends AppController {
 
     public function spectacl()
     {
-        $this->render('spectacl');
+        $performencesRepository = new SearchRepository();
+        $spectacle = $performencesRepository->getAllPerformances();
+        var_dump($spectacle);
+
+        $this->render('spectacl', ['spectacle'=>$spectacle]);
     }
+
     public function test()
     {
         $this->render('test');
