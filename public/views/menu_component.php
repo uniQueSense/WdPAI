@@ -10,6 +10,18 @@
         <li><a href="/search">Szukaj spektaklu</a></li>
         <li><a href="/theatre">Teatry</a></li>
         <li><a href="/aboute">O nas</a></li>
-        <li><a href="/login">Zaloguj się</a></li>
+        <li>
+            <?php
+            if (isset($_COOKIE["email"]))
+                echo '<a href="/logout">Wyloguj się</a>';
+            else
+                echo '<a href="/login">Zaloguj się</a>';
+            ?>
+
+            <a href="/login">
+
+
+            </a>
+        </li>
     </ul>
 </nav>

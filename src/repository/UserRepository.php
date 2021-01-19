@@ -26,29 +26,46 @@ class UserRepository extends Repository
         );
     }
 
-    public function setUser(string $name, string $surname, string $email, string $password, string $city, string $street, int $number) {
+    public function setUser(string $name, string $surname, string $email, string $password,
+                            string $city, string $street, int $home_number, int $phone_number) :bool {
 
         $connection = $this->database->connect();
 
         if ($connection->beginTransaction()) {
             $stmt = $connection->prepare('
             INSERT INTO users (name, surname, email, password)
-            VALUES (:name,:surname,:email,:password)
-            ');
+            VALUES (:name, :surname, :email, :password)');
 
-            if (! $stmt->execute([
+            if (!$stmt->execute([
                 ':name' => $name,
                 ':surname' => $surname,
                 ':email' => $email,
                 ':password' => $password])) {
 
                 $connection->rollBack();
-                return;
+                return false;
             }
 
-            // TODO napisać zeby powstal nowy wiersz w users details
+            $stmt = $connection->prepare('
+            INSERT INTO users_details (city, street, home_number, phone, id_user)
+            VALUES (:city, :street, :home_number, :phone_number, :id_user)');
+
+            if (!$stmt->execute([
+                ':city' => $city,
+                ':street' => $street,
+                ':home_number' => $home_number,
+                ':phone_number' => $phone_number,
+                ':id_user' => $connection->lastInsertId()])) {
+
+                $connection->rollBack();
+                return false;
+            }
+            $connection->commit();
+
+            return true;
         }
+
+        return false;
+
     }
-
-
 }

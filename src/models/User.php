@@ -10,7 +10,8 @@ class User
     private $id_user;
     private $city;
     private $street;
-    private $number;
+    private $home_number;
+    private $phone_number;
 
 
 

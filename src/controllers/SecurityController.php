@@ -6,9 +6,14 @@ require_once __DIR__.'/../repository/UserRepository.php';
 
 class SecurityController extends AppController
 {
-    public function login()
-    {
+    public function login() {
         $this->render('login');
+    }
+
+    public function logout() {
+        unset($_COOKIE['email']);
+        unset($_COOKIE['id']);
+        $this->render('projects');
     }
 
     public function loginForm()

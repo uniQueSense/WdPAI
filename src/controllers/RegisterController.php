@@ -26,12 +26,13 @@ class RegisterController extends AppController
         $repassword = $_POST["repassword"];
         $city = $_POST["city"];
         $street = $_POST["street"];
-        $number = $_POST["number"];
-        $phone = $_POST["phone"];
+        $home_number = $_POST["home_number"];
+        $phone_number = $_POST["phone_number"];
 
         //var_dump($_POST);
+        //die();
         if ($repassword == $password){
-            $user = $userRepository->setUser($name, $surname, $email, $password, $city, $street, $number, $phone);
+            $user = $userRepository->setUser($name, $surname, $email, $password, $city, $street, $home_number, $phone_number);
         }
         else{
             return $this->render('register', ['messages' => ['Niepoprawne hasła!!']]);

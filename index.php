@@ -10,6 +10,8 @@ Router::get('', 'DefaultController');
 Router::post('login', 'SecurityController');
 Router::post('loginForm', 'SecurityController');
 
+Router::post('logout', 'SecurityController');
+
 Router::post('register', 'RegisterController');
 Router::post('registerForm', 'RegisterController');
 
