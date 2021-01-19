@@ -2,6 +2,8 @@
 
 require_once 'src/controllers/DefaultController.php';
 require_once 'src/controllers/SecurityController.php';
+require_once 'src/controllers/RegisterController.php';
+require_once 'src/controllers/SearchController.php';
 
 class Router {
 
@@ -14,7 +16,6 @@ class Router {
   public static function post($url, $view) {
       self::$routes[$url] = $view;
   }
-
 
   public static function run ($url) {
     $action = explode("/", $url)[0];

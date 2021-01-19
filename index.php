@@ -6,14 +6,23 @@ $path = trim($_SERVER['REQUEST_URI'], '/');
 $path = parse_url( $path, PHP_URL_PATH);
 
 Router::get('', 'DefaultController');
+
+Router::post('login', 'SecurityController');
+Router::post('loginForm', 'SecurityController');
+
+Router::post('logout', 'SecurityController');
+
+Router::post('register', 'RegisterController');
+Router::post('registerForm', 'RegisterController');
+
+Router::get('search', 'SearchController');
+
 Router::get('projects', 'DefaultController');
-Router::get('register', 'DefaultController');
-Router::get('register_1', 'DefaultController');
-Router::get('register_2', 'DefaultController');
-Router::post('login', 'DefaultController');
-Router::post('search', 'DefaultController');
-Router::post('aboute', 'DefaultController');
-Router::post('theatre', 'DefaultController');
-Router::post('booking', 'DefaultController');
-Router::post('spectacl', 'DefaultController');
+
+Router::get('theatre', 'DefaultController');
+Router::get('booking', 'DefaultController');
+Router::get('spectacl', 'DefaultController');
+Router::get('aboute', 'DefaultController');
+Router::post('test', 'DefaultController');
+
 Router::run($path);
