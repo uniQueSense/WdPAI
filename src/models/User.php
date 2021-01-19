@@ -7,14 +7,32 @@ class User
     private $password;
     private $name;
     private $surname;
+    private $id_user;
+    private $city;
+    private $street;
+    private $number;
 
 
-    public function __construct(string $email , string $password, string $name, string $surname)
+
+
+    public function __construct(int $id_user, string $email , string $password, string $name, string $surname)
     {
+        $this->id_user = $id_user;
         $this->email = $email;
         $this->password = $password;
         $this->name = $name;
         $this->surname = $surname;
+    }
+
+
+    public function getIdUser(): int
+    {
+        return $this->id_user;
+    }
+
+    public function setIdUser(int $id_user): void
+    {
+        $this->id_user = $id_user;
     }
 
     public function getEmail(): string

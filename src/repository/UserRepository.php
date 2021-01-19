@@ -14,15 +14,15 @@ class UserRepository extends Repository
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($user == false) {
-            // TODO napisac metode zwracajaca exception BAZA DANYCH W PHP 28:40
             return null;
         }
 
         return new User(
-            $user['$email'],
-            $user['$password'],
-            $user['$name'],
-            $user['$surname']
+            $user['id_user'],
+            $user['email'],
+            $user['password'],
+            $user['name'],
+            $user['surname']
         );
     }
 

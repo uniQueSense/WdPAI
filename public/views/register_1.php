@@ -20,6 +20,7 @@
 
         <div class="register_container">
             <form>
+
                 <div class="city">
                     <p>Miejscowość</p>
                     <input name="city" type="text" placeholder="Warszawa">
@@ -39,6 +40,8 @@
                 <div class="button_login">
                     <button><i class="fas fa-arrow-right"></i></button>
                 </div>
+
+
             </form>
         </div>
     </div>

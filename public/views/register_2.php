@@ -19,6 +19,7 @@
 
         <div class="register_container">
             <form>
+
                 <div class="card_number">
                     <p>Numer karty</p>
                     <input class="inputCard" type="number" min="1000" max="9999" name="creditCard1" id="creditCard1" required/>
@@ -45,6 +46,7 @@
                 <div class="button_login">
                     <button><i class="fas fa-arrow-right"></i></button>
                 </div>
+
             </form>
         </div>
 
