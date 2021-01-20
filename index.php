@@ -16,10 +16,10 @@ Router::post('register', 'RegisterController');
 Router::post('registerForm', 'RegisterController');
 
 Router::get('search', 'SearchController');
+Router::get('theatre', 'TheatreController');
 
 Router::get('projects', 'DefaultController');
 
-Router::get('theatre', 'DefaultController');
 Router::get('booking', 'DefaultController');
 Router::get('spectacl', 'DefaultController');
 Router::get('aboute', 'DefaultController');
