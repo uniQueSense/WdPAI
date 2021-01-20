@@ -29,13 +29,6 @@
                 </div>
             <?php endforeach; ?>
 
-<!--            <div id="project-1">-->
-<!--                <img src="public/img/spectacl1.svg">-->
-<!--                <div>-->
-<!--                    <h2>title</h2>-->
-<!--                </div>-->
-<!--            </div>-->
-
         </section>
 
         </div>
