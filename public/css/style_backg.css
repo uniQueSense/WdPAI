@@ -82,7 +82,7 @@ section.spectacl_title {
 }
 .theatre_list {
     position: relative;
-    display: list-item;
+    display: grid;
     flex-direction: column;
     justify-content: space-around;
     grid-gap: 2em;
@@ -214,6 +214,8 @@ section.spectacl_title {
 .legenda>i>p {
 
 }
+
+
 
 @media only screen and (max-device-width: 420px){
     .container1 {

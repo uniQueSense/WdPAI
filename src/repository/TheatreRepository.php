@@ -25,6 +25,8 @@ class TheatreRepository extends Repository {
                 $theatre['number']
             );
         }
+        //var_dump($array);
+        //die();
 
         return $array;
     }

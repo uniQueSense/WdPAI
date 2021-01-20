@@ -3,13 +3,15 @@
 class Theatres {
     private $id_theatre;
     private $name;
+    private $city;
     private $street;
     private $number;
 
-    public function __construct($id_theatre, $name, $number, $street) {
+    public function __construct($id_theatre, $name, $city, $number, $street) {
 
         $this->id_theatre = $id_theatre;
         $this->name = $name;
+        $this->city = $city;
         $this->street = $street;
         $this->number = $number;
     }
@@ -32,6 +34,16 @@ class Theatres {
     public function setName($name): void
     {
         $this->name = $name;
+    }
+
+    public function getCity()
+    {
+        return $this->city;
+    }
+
+    public function setCity($city): void
+    {
+        $this->city = $city;
     }
 
     public function getStreet()

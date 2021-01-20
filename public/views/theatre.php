@@ -20,12 +20,15 @@
 
         <section class="theatre_list">
             <?php
-            foreach ($theatre as $theatres): ?>
-                <div class="theatre1" id="<? $theatres->getIdTheatre();?>"
-                    <dl>
-                        <dt><a href="#"><? $theatres->getName(); ?></a></dt>
-                        <dd></dd>
-                    </dl>
+            foreach ($theatre as $project): ?>
+                <div class="theatre1" id="<? $project->getIdTheatre();?>">
+                    <ul>
+                        <li><a href="#" ><h><?= $project->getName(); ?></h></a></li>
+                        <p><?= $project->getCity(); ?></p>
+                        <p><?= $project->getStreet(); ?></p>
+                        <p><?= $project->getNumber(); ?></p>
+                    </ul>
+                </div>
             <?php endforeach; ?>
         </section>
     </div>

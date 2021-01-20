@@ -8,8 +8,8 @@ class TheatreController extends AppController {
     public function theatre() {
 
         $theatreRepository = new TheatreRepository();
-        $theatre = $theatreRepository->getAllTheatres();
+        $place = $theatreRepository->getAllTheatres();
 
-        $this->render('theatre', ['theatre'=>$theatre]);
+        $this->render('theatre', ['theatre'=>$place]);
     }
 }
