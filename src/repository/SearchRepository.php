@@ -2,6 +2,7 @@
 
 require_once "Repository.php";
 require_once __DIR__."/../models/Performances.php";
+
 class SearchRepository extends Repository
 {
     public function getAllPerformances(): array {
