@@ -26,7 +26,6 @@ class SearchRepository extends Repository
             );
         }
 
-
         return $array;
     }
 
@@ -40,19 +39,6 @@ class SearchRepository extends Repository
         $stmt->execute();
 
         $spectacles =$stmt->fetchAll(PDO::FETCH_ASSOC);
-//
-//        $array = array();
-//
-//        foreach ($spectacles as $spectacle){
-//
-//            $array[] = new Performances(
-//                $spectacle['id_spectacle'],
-//                $spectacle['title'],
-//                $spectacle['description'],
-//                $spectacle['cost'],
-//                $spectacle['image']
-//            );
-//        }
 
         return $spectacles;
     }
