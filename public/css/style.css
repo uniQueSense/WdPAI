@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     background: radial-gradient(circle, rgba(128,0,0,1) 20%, rgba(19,0,0,1) 60%);
@@ -5,6 +6,10 @@ body {
     width: 100vw;
     overflow: hidden;
     font-family: sans-serif;
+}
+
+a:hover {
+
 }
 
 .col-8 {
@@ -101,22 +106,29 @@ ul {
 .headline {
     display: grid;
     align-items: center;
-    color: dodgerblue;
+    color: white;
     text-align: center;
     height: 9%;
 }
 
 .headline h {
-font-size: 5vh;
+font-size: 7vh;
 }
 
-/*<-- Glide.js-->*/
-.play {
+/* <-- Glide.js--> */
 
-}
 
 .play h1 {
     text-align: center;
+}
+
+.glide__slide {
+    transform: scale(1) translateY(0);
+    transition: 1s;
+}
+
+.link {
+    display: none;
 }
 
 .play img {
@@ -132,22 +144,37 @@ font-size: 5vh;
 
 }
 
-.glide__slide--active {
-    padding: 3vh;
-    transform: scale(1.13);
+.glide__slide--active .rotate {
+    transform: rotateX(180deg) translateY(0);
+    transition: 1s;
 }
 
+.glide__slide--active {
+    transform: scale(1.13) translateY(5%);
+    transition: 1s;
+}
+.glide__slide--active .link {
+    display: block;
+}
+
+.glide__slide .rectangle {
+    background: #00000050;
+    color: wheat;
+    transition: 1s;
+}
+
+.glide__slide--active .rectangle {
+    background: black;
+    color: #FFFFFF;
+    transition: 1s;
+}
 .rectangle {
     display: flow-root;
     margin: 0;
     height: 12vh;
-    background-color: deepskyblue;
-}
-
-.glide__slide--active rectangle {
-    padding: 3vh;
-    transform: scale(1.13);
-    background-color: blue;
+    background-color: #00000050;
+    position: relative;
+    top: -0.3em;
 }
 
 

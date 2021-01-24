@@ -1,7 +1,6 @@
 <?php
 
-require_once 'AppController.php';
-require_once __DIR__."/../repository/SearchRepository.php";
+
 
 class SearchController extends AppController {
 
@@ -13,11 +12,6 @@ class SearchController extends AppController {
     }
 
     public function searchSearch() {
-//        //if input jest pusty => wyciągnij wszystko z bazy danych
-//        $repository = new SearchRepository();
-//        $title =
-//        $performances = $repository->getPerformancesByTittle($title);
-//        echo json_encode($performances);
 
         $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
         if($contentType === "application/json") {
