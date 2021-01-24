@@ -16,6 +16,8 @@ Router::post('register', 'RegisterController');
 Router::post('registerForm', 'RegisterController');
 
 Router::get('search', 'SearchController');
+Router::post('searchSearch', 'SearchController');
+
 Router::get('theatre', 'TheatreController');
 
 Router::get('projects', 'DefaultController');
