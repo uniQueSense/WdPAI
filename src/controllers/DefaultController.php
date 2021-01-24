@@ -26,6 +26,9 @@ class DefaultController extends AppController {
         $this->render('booking');
     }
 
+    public function index() {
+        $this->spectacl();
+    }
     public function spectacl()
     {
         $performencesRepository = new SearchRepository();
