@@ -16,7 +16,4 @@
     <?PHP include 'menu_component.php'?>
 
 
-    <div class="page_location"><img src="public/img/pasek.svg"></div>
-
-
 </body>

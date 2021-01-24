@@ -24,9 +24,8 @@
                 <div class="theatre1" id="<? $project->getIdTheatre();?>">
                     <ul>
                         <li><a href="#" ><h><?= $project->getName(); ?></h></a></li>
-                        <p><?= $project->getCity(); ?></p>
-                        <p><?= $project->getStreet(); ?></p>
-                        <p><?= $project->getNumber(); ?></p>
+                        <p><?= $project->getCity(), " ", $project->getStreet(), " ", $project->getNumber(); ?></p>
+
                     </ul>
                 </div>
             <?php endforeach; ?>
