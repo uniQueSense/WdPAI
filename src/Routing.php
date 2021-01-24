@@ -5,6 +5,7 @@ require_once 'src/controllers/SecurityController.php';
 require_once 'src/controllers/RegisterController.php';
 require_once 'src/controllers/SearchController.php';
 require_once 'src/controllers/TheatreController.php';
+require_once 'src/controllers/SpectacleController.php';
 
 class Router {
 
@@ -24,9 +25,9 @@ class Router {
       die("Wrong url!");
     }
 
-    $controller = self::$routes[$action];
-    $object = new $controller;
-    $action = $action ?: 'index';
+      $action = $action ?: 'recommendedSpectacle';
+      $controller = self::$routes[$action];
+      $object = new $controller;
 
     $object->$action();
   }
