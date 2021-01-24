@@ -19,35 +19,16 @@
         </div>
 
         <section class="theatre_list">
-            <dl>
-                <dt><a href="#">Teatr1</a></dt>
-                <dd>wjunfwinfewofniewnofonijhbugyvfctvghbnjimnihbugvyfbhunijbugvyfctvghbjnkhbgvcfvhbjnkhbgvfhbjnkin</dd>
-                <dt>Teatr2</dt>
-                <dd>wjunfwinfewofniewnofonijhbugyvfctvghbnjimnihbugvyfbhunijbugvyfctvghbjnkhbgvcfvhbjnkhbgvfhbjnkin</dd>
-                <dt>Teatr3</dt>
-                <dd>wjunfwinfewofniewnofonijhbugyvfctvghbnjimnihbugvyfbhunijbugvyfctvghbjnkhbgvcfvhbjnkhbgvfhbjnkin</dd>
-                <dt>Teatr4</dt>
-                <dd>wjunfwinfewofniewnofonijhbugyvfctvghbnjimnihbugvyfbhunijbugvyfctvghbjnkhbgvcfvhbjnkhbgvfhbjnkin</dd>
-                <dt>Teatr5</dt>
-                <dd>wjunfwinfewofniewnofonijhbugyvfctvghbnjimnihbugvyfbhunijbugvyfctvghbjnkhbgvcfvhbjnkhbgvfhbjnkin</dd>
-                <dt>Teatr6</dt>
-                <dd>wjunfwinfewofniewnofonijhbugyvfctvghbnjimnihbugvyfbhunijbugvyfctvghbjnkhbgvcfvhbjnkhbgvfhbjnkin</dd>
-                <dt>Teatr7</dt>
-                <dd>wjunfwinfewofniewnofonijhbugyvfctvghbnjimnihbugvyfbhunijbugvyfctvghbjnkhbgvcfvhbjnkhbgvfhbjnkin</dd>
-                <dt>Teatr1</dt>
-                <dd>wjunfwinfewofniewnofonijhbugyvfctvghbnjimnihbugvyfbhunijbugvyfctvghbjnkhbgvcfvhbjnkhbgvfhbjnkin</dd>
-                <dt>Teatr1</dt>
-                <dd>wjunfwinfewofniewnofonijhbugyvfctvghbnjimnihbugvyfbhunijbugvyfctvghbjnkhbgvcfvhbjnkhbgvfhbjnkin</dd>
-                <dt>Teatr1</dt>
-                <dd>wjunfwinfewofniewnofonijhbugyvfctvghbnjimnihbugvyfbhunijbugvyfctvghbjnkhbgvcfvhbjnkhbgvfhbjnkin</dd>
-                <dt>Teatr1</dt>
-                <dd>wjunfwinfewofniewnofonijhbugyvfctvghbnjimnihbugvyfbhunijbugvyfctvghbjnkhbgvcfvhbjnkhbgvfhbjnkin</dd>
-                <dt>Teatr1</dt>
-                <dd>wjunfwinfewofniewnofonijhbugyvfctvghbnjimnihbugvyfbhunijbugvyfctvghbjnkhbgvcfvhbjnkhbgvfhbjnkin</dd>
-                <dt>Teatr1</dt>
-                <dd>wjunfwinfewofniewnofonijhbugyvfctvghbnjimnihbugvyfbhunijbugvyfctvghbjnkhbgvcfvhbjnkhbgvfhbjnkin</dd>
+            <?php
+            foreach ($theatre as $project): ?>
+                <div class="theatre1" id="<? $project->getIdTheatre();?>">
+                    <ul>
+                        <li><a href="#" ><h><?= $project->getName(); ?></h></a></li>
+                        <p><?= $project->getCity(), " ", $project->getStreet(), " ", $project->getNumber(); ?></p>
 
-            </dl>
+                    </ul>
+                </div>
+            <?php endforeach; ?>
         </section>
     </div>
 </body>

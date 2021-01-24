@@ -1,6 +1,8 @@
 <?php
 
-require 'Routing.php';
+include_once 'src/AutoLoader.php';
+include_once 'src/Routing.php';
+AutoLoader::register();
 
 $path = trim($_SERVER['REQUEST_URI'], '/');
 $path = parse_url( $path, PHP_URL_PATH);
@@ -16,13 +18,19 @@ Router::post('register', 'RegisterController');
 Router::post('registerForm', 'RegisterController');
 
 Router::get('search', 'SearchController');
+Router::post('searchSearch', 'SearchController');
 
-Router::get('projects', 'DefaultController');
+Router::get('theatre', 'TheatreController');
+Router::post('searchTheatre', 'TheatreController');
 
-Router::get('theatre', 'DefaultController');
+Router::get('recommendedSpectacle', 'SpectacleController');
+
 Router::get('booking', 'DefaultController');
+
 Router::get('spectacl', 'DefaultController');
+
 Router::get('aboute', 'DefaultController');
+
 Router::post('test', 'DefaultController');
 
 Router::run($path);

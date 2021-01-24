@@ -20,15 +20,15 @@ class DefaultController extends AppController {
     {
         $this->render('aboute');
     }
-    public function theatre()
-    {
-        $this->render('theatre');
-    }
+
     public function booking()
     {
         $this->render('booking');
     }
 
+    public function index() {
+        $this->spectacl();
+    }
     public function spectacl()
     {
         $performencesRepository = new SearchRepository();
