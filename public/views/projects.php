@@ -31,7 +31,6 @@
                     <div class="glide__track" data-glide-el="track">
                         <ul class="glide__slides">
 
-
                             <?php foreach ($spectacle as $project):
                                 $image = json_decode($project->getImage(), true);
                                 $image = $image[0]['route'];
@@ -40,14 +39,14 @@
                                     <img src="<?= $image; ?>" alt="">
                                     <div class="rectangle">
                                         <h1><?= $project->getTitle(); ?></h1>
-                                        <a class="link" href="#">Read more!</a>
+                                        <a class="link" href="/chosenSpectacle?id=<?= $project->getId(); ?>">Pokaż więcej!</a>
                                     </div>
 
                                     <div class="rotate">
                                         <img src="<?= $image; ?>" alt="">
                                         <div class="rectangle">
                                             <h1><?= $project->getTitle(); ?></h1>
-                                            <a class="link">Read more!</a>
+                                            <a class="link">Pokaż więcej!</a>
                                         </div>
                                     </div>
                                 </li>
