@@ -25,13 +25,16 @@
                 $image = json_decode($project->getImage(), true);
                 $image = $image[0]['route'];
                 ?>
-
+            <a class="link" href="/chosenSpectacle?id=<?= $project->getId(); ?>">
                 <div class="project-1" id="<?= $project->getId(); ?>">
                     <img src="<?= $image; ?>" alt="">
                     <div>
                         <h2><?= $project->getTitle(); ?></h2>
                     </div>
                 </div>
+
+            </a>
+
             <?php endforeach; ?>
 
         </section>
