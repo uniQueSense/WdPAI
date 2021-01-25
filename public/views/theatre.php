@@ -21,10 +21,13 @@
         <section class="theatre_list">
             <?php
             foreach ($theatre as $project): ?>
-                <div class="theatre1" id="<? $project->getIdTheatre();?>">
+                <div class="theatre_description" id="<? $project->getIdTheatre();?>">
                     <ul>
-                        <li><a href="#" ><h><?= $project->getName(); ?></h></a></li>
-                        <p><?= $project->getCity(), " ", $project->getStreet(), " ", $project->getNumber(); ?></p>
+                        <li>
+                            <a href="#" ><h><?= $project->getName(); ?></h></a>
+                            <p>Miasto: <?= $project->getCity(); ?></p>
+                            <p>Ulica: <?= $project->getStreet()." ". $project->getNumber(); ?></p>
+                        </li>
 
                     </ul>
                 </div>
