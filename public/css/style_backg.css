@@ -14,6 +14,75 @@ body {
     flex-direction: column;
 }
 
+/* START chosenSpectacle */
+
+.container-spectacle {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.spectacle-img {
+    height: 30vh;
+    width: 30vh;
+    object-fit: cover;
+    margin: 0.5em;
+}
+
+.images-slide>ul {
+    list-style-type: none;
+}
+
+.button-navi {
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    margin: 2vh;
+}
+
+.button-navigation {
+    background: #2699FB;
+    color: wheat;
+    width: 14%;
+    height: 60%;
+    margin: 1%;
+
+}
+
+.block-spectacle1 {
+    display: none;
+}
+
+.block-spectacle2 {
+    display: grid;
+    color: mistyrose;
+    width: 50%;
+    font-size: 1.5em;
+    overflow: auto;
+    margin-bottom: 1em;
+}
+
+.block-spectacle3 {
+    display: none;
+}
+
+h10 {
+padding-block-start: 1em;
+font-size: 2em;
+font-weight: bold;
+color: gold;
+text-decoration: underline;
+}
+
+/* END chosenSpectacle*/
+
 .search_place {
     display: flex;
     justify-content: center;
@@ -53,15 +122,16 @@ section.spectacle_title {
     padding-bottom: 0;
     overflow: auto;
     width: 70%;
+    height: 100%;
 }
 
-.spectacle_title>div>img {
-    height: 100%;
+.spectacle_title .project-1>img {
+    height: 50vh;
     width: 100%;
     object-fit: cover;
 }
 
-.spectacle_title>div>div {
+.spectacle_title .project-1>div {
     position: absolute;
     display: grid;
     height: 100%;
@@ -72,10 +142,10 @@ section.spectacle_title {
     justify-content: center;
 }
 
-.spectacle_title>div {
+.spectacle_title>a>div {
     position: relative;
     border: 1px solid gray;
-    height: 100%;
+    height: 99%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

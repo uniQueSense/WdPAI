@@ -132,7 +132,7 @@ font-size: 7vh;
 }
 
 .play img {
-    height: 80%;
+    height: 40vh;
     width: 100%;
     object-fit: cover;
 }
