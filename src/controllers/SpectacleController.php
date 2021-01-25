@@ -12,10 +12,16 @@ class SpectacleController extends AppController {
 
     public function chosenSpectacle() {
         $spectacleRepository = new SpectacleRepository();
-        $thisSpectacle = $spectacleRepository->getOnceSpectacle(1);
 
-        $this->render('spectacle', ['spectacle'=>$thisSpectacle]);
+        $id_spectacle = $_GET["id"];
+        $thisSpectacle = $spectacleRepository->getOnceSpectacle($id_spectacle);
+        $actors = $spectacleRepository->getSpectacleWithActors($id_spectacle);
+       if (empty($thisSpectacle)) {
+           return ;
+       }
+
+        $this->render('spectacle', ['spectacle'=>$thisSpectacle, 'actors' => $actors]);
+
     }
-
 
 }

@@ -24,9 +24,7 @@ class SpectacleRepository extends Repository {
                 $spectacle['image']
             );
         }
-
         return $array;
-
     }
 
     public function getOnceSpectacle($int): ?array {
@@ -38,6 +36,17 @@ class SpectacleRepository extends Repository {
         $spectacle = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         return $spectacle;
+
+    }
+
+    public function getSpectacleWithActors(int $spectacleID): ?array {
+        $stmt = $this->database->connect()->prepare('
+        SELECT * FROM actor_spectacle acsp LEFT JOIN actor ac on ac.id_actor = acsp.id_actor 
+        WHERE acsp.id_spectacle = ?;
+        ');
+
+        $stmt->execute([$spectacleID]);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     }
 
