@@ -10,7 +10,8 @@ class SecurityController extends AppController
     public function logout() {
         unset($_COOKIE['email']);
         unset($_COOKIE['id']);
-        $this->render('projects');
+        $this->render('recommendedSpectacle');
+
     }
 
     public function loginForm()
@@ -43,7 +44,7 @@ class SecurityController extends AppController
         setcookie("id",$user->getIdUser(),time()+86000*30);
 
         $url = "http://$_SERVER[HTTP_HOST]";
-        header("Location: {$url}/projects");
+        header("Location: {$url}/recommendedSpectacle");
     }
 
 }
