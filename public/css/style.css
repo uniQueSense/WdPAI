@@ -81,7 +81,7 @@ form {
 .button_login>button {
     display: grid;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
     height: 3vh;
     width: 3vh;
     background: white;
