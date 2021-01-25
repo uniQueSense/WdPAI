@@ -20,10 +20,14 @@
         </div>
 
         <section class="spectacle_title">
-            <?php
-            foreach ($spectacle as $project): ?>
+
+            <?php foreach ($spectacle as $project):
+                $image = json_decode($project->getImage(), true);
+                $image = $image[0]['route'];
+                ?>
+
                 <div class="project-1" id="<?= $project->getId(); ?>">
-                    <img src="public/resources/<?= $project->getImage(); ?>">
+                    <img src="<?= $image; ?>" alt="">
                     <div>
                         <h2><?= $project->getTitle(); ?></h2>
                     </div>
