@@ -19,8 +19,7 @@
         </div>
 
         <section class="theatre_list">
-            <?php
-            foreach ($theatre as $project): ?>
+            <?php foreach ($theatre as $project): ?>
                 <div class="theatre_description" id="<? $project->getIdTheatre();?>">
                     <ul>
                         <li>
