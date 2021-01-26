@@ -46,7 +46,7 @@
                                         <img src="<?= $image; ?>" alt="">
                                         <div class="rectangle">
                                             <h1><?= $project->getTitle(); ?></h1>
-                                            <a class="link">Pokaż więcej!</a>
+                                            <a class="link non-active" href="">Pokaż więcej!</a>
                                         </div>
                                     </div>
                                 </li>
