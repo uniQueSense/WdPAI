@@ -77,6 +77,16 @@ body {
     margin-bottom: 1em;
 }
 
+.information-ticket  {
+    display: grid;
+    font-size: 1em;
+    width: 50%;
+}
+
+h1 {
+    color: white;
+}
+
 h10 {
     padding-block-start: 1em;
     padding-block-end: 1em;
