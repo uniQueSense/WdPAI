@@ -50,4 +50,33 @@ class SpectacleRepository extends Repository {
 
     }
 
+    public function getTheatersWithSpectacle(int $spectacleID): ?array {
+        $stmt = $this->database->connect()->prepare('
+       SELECT t.id_theatre, t.city, t.name FROM spectacle s
+       LEFT JOIN spectacle_theatre st on s.id_spectacle = st.id_spectacle
+       LEFT JOIN theatre t on st.id_theatre = t.id_theatre
+        WHERE s.id_spectacle = ?;
+        ');
+
+        $stmt->execute([$spectacleID]);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function getSeats(int $spectacleID, int $theatreID): ?array {
+        $stmt = $this->database->connect()->prepare('
+       SELECT seats FROM spectacle_theatre WHERE id_theatre=? AND id_spectacle=?;
+        ');
+
+        $stmt->execute([$theatreID, $spectacleID]);
+        $json = $stmt->fetchColumn(0);
+        return json_decode($json, true);
+    }
+
+    public function updateSeats(string $seatJSON, int $spectacleID, int $theatreID): bool {
+        $stmt = $this->database->connect()->prepare('
+        UPDATE spectacle_theatre SET seats=? WHERE id_theatre=? AND id_spectacle=?;
+        ');
+
+        return $stmt->execute([$seatJSON, $theatreID, $spectacleID]);
+    }
 }
