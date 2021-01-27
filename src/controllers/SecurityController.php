@@ -8,9 +8,38 @@ class SecurityController extends AppController
     }
 
     public function logout() {
-        unset($_COOKIE['email']);
-        unset($_COOKIE['id']);
-        $this->render('recommendedSpectacle');
+        setcookie("email",null,-1);
+        setcookie("id",null,-1);
+        Router::run('recommendedSpectacle');
+
+    }
+
+    public function bookSeat() {
+        if( !isset($_COOKIE['id'])) {
+            return $this->render('login');
+        }
+
+        $seatRow = $_POST['seat_row'];
+        $seatCol = $_POST['seat_col'];
+        $Sid = $_POST['Sid'];
+        $Tid = $_POST['Tid'];
+        $password = $_POST['passwd'];
+        $confirmPassword = $_POST['conf-passwd'];
+
+        $repo = new UserRepository();
+        //$user = $repo->getUser($_SESSION[])
+
+        $repo = new SpectacleRepository();
+        $json = $repo->getSeats($Sid, $Tid);
+        $updatedJson = $this->updateSeatJson($json, $seatCol, $seatRow);
+        $repo->updateSeats($updatedJson, $Sid, $Tid);
+        //TODO check passwords
+       /* if($password === $confirmPassword) {
+            //if($this->checkPassword($password))
+        }*/
+        //TODO assign booked seat to user!
+        //TODO return view
+        return Router::run('recommendedSpectacle');
 
     }
 
@@ -36,7 +65,7 @@ class SecurityController extends AppController
             return $this->render('login',['messages' => ['Zły email!']]);
         }
 
-        if ($user->getPassword() !== $password) {
+        if ($this->checkPassword($password, $user->getPassword())) {
             return $this->render('login',['messages' => ['Złe hasło!']]);
         }
 
@@ -47,4 +76,25 @@ class SecurityController extends AppController
         header("Location: {$url}/recommendedSpectacle");
     }
 
+    private function updateSeatJson($json, $seatCol, $seatRow) {
+        $newJson = [];
+        $newJson['seats_max'] = (int)$json['seats_max'];
+        $newJson['seats_occupied'] = $json['seats_occupied'] + 1;
+
+        foreach ($json['seats'] as $seat){
+            if($seat['row'] === $seatRow && $seat['column'] === $seatCol ) {
+                continue;
+            }
+            $newJson['seats'][] = $seat;
+        }
+        return json_encode($newJson);
+
+    }
+    private function hashPasswd($passwd): string {
+        return password_hash($passwd,PASSWORD_ARGON2ID);
+    }
+
+    private function checkPassword($passwd, $toCheck): bool {
+        return password_verify($toCheck, $passwd);
+    }
 }
