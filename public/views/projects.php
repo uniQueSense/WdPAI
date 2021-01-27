@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/style_backg.css">
-    <link rel="stylesheet" type="text/css" href="public/css/style.css">
-    <link rel="stylesheet" type="text/css" href="public/css/menu_style.css">
-
-    <script src="https://kit.fontawesome.com/7186f6c2cc.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/public/css/style_backg.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/menu_style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/glide-slide-main-page-style.css">
 
     <script src="/public/js/glidescript.js" defer></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/7186f6c2cc.js" crossorigin="anonymous"></script>
 
-
-    <title>MainPage</title>
+    <title>Strona główna</title>
 
 </head>
 
@@ -23,8 +22,7 @@
         <?PHP include 'menu_component.php'?>
 
         <div class="main">
-
-            <div class="headline"><h>Repertuary</h></div>
+            <div class="headline"><h1>Repertuary</h1></div>
 
             <div class="col-8">
                 <div class="glide">

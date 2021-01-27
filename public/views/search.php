@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/style_backg.css">
-    <link rel="stylesheet" type="text/css" href="public/css/menu_style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/style_backg.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/menu_style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/search-style.css">
 
-    <script type="text/javascript" src="./public/js/search.js" defer/>
+    <script type="text/javascript" src="/public/js/search.js" defer></script>
     <script src="https://kit.fontawesome.com/7186f6c2cc.js" crossorigin="anonymous"></script>
     <title>Szukaj</title>
 </head>
@@ -39,19 +39,18 @@
 
         </section>
 
-        </div>
+
     </div>
 </body>
 
 <template id="spectacle-template">
-    <div class="project-1" id="">
-        <img src="public/resources/biesy.svg">
-        <div>
-            <h2>Tittle/h2>
+    <a class="link" href="/chosenSpectacle?id=<?= $project->getId(); ?>">
+        <div class="project-1" id="">
+            <img src="" alt="">
+            <div>
+                <h2>Tittle</h2>
+            </div>
         </div>
-    </div>
+    </a>
 </template>
 
-
-
-</html>
