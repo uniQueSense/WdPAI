@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/style_backg.css">
-    <link rel="stylesheet" type="text/css" href="public/css/menu_style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/style_backg.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/menu_style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/theatre-style.css">
 
     <script src="https://kit.fontawesome.com/7186f6c2cc.js" crossorigin="anonymous"></script>
     <title>Szukaj</title>
@@ -23,7 +24,7 @@
                 <div class="theatre_description" id="<? $project->getIdTheatre();?>">
                     <ul>
                         <li>
-                            <a href="#" ><h><?= $project->getName(); ?></h></a>
+                            <a href="#" ><h1><?= $project->getName(); ?></h1></a>
                             <p>Miasto: <?= $project->getCity(); ?></p>
                             <p>Ulica: <?= $project->getStreet()." ". $project->getNumber(); ?></p>
                         </li>
@@ -34,6 +35,3 @@
         </section>
     </div>
 </body>
-
-
-</html>
