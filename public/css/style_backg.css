@@ -6,6 +6,7 @@ body {
     overflow: hidden;
     font-family: sans-serif;
 }
+
 .container1 {
     margin: 0;
     width: 100vw;
@@ -14,125 +15,10 @@ body {
     flex-direction: column;
 }
 
-/* START chosenSpectacle */
-
-.container-spectacle {
-    margin: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-}
-
-.spectacle-img {
-    height: 30vh;
-    width: 30vh;
-    object-fit: cover;
-    margin: 0.5em;
-}
-
-.images-slide>ul {
-    list-style-type: none;
-}
-
-.button-navi {
-    display: flex;
-    height: 10vh;
+.container-content {
+    height: 92%;
     width: 100%;
-    align-content: center;
-    justify-content: center;
-    justify-items: center;
-    margin: 2vh;
-}
-.button-description {
-    color: blue;
-}
-
-.button-navigation {
-    background: #2699FB;
-    color: wheat;
-    width: 14%;
-    height: 60%;
-    margin: 1%;
-}
-
-.block-spectacle1 {
-    display: none;
-    margin-bottom: 1em;
-}
-
-.block-spectacle2 {
-    display: grid;
-    color: mistyrose;
-    width: 50%;
-    font-size: 1.5em;
-    overflow: auto;
-    margin-bottom: 1em;
-}
-
-.block-spectacle3 {
-    display: none;
-    margin-bottom: 1em;
-}
-
-.information-ticket  {
-    display: grid;
-    font-size: 1em;
-    width: 50%;
-}
-
-h1 {
-    color: white;
-}
-
-h10 {
-    padding-block-start: 1em;
-    padding-block-end: 1em;
-    font-size: 2em;
-    font-weight: bold;
-    color: gold;
-    text-decoration: underline;
-}
-
-h11 {
-    font-size: 2.5em;
-    font-weight: bold;
-    color: white;
-}
-
-.actors-block {
-    display: grid;
-    overflow: auto;
-    margin-bottom: 1em;
-}
-
-.actors-block>ul {
-    display: contents;
-    font-size: 1.3em;
-    color: gold;
-}
-
-.actors-block>ul>li>p {
-    margin-bottom: 0.5em;
-    margin-top: 0.5em;
-}
-
-/* END chosenSpectacle*/
-
-.search_place {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 25%;
-}
-
-.search_place>input {
-    height: 2vh;
-    width: 21vh;
-    padding: 0.3vh;
-    margin-right: 0.2vh;
+    margin-bottom: 1%;
 }
 
 .button1 {
@@ -142,7 +28,16 @@ h11 {
     width: 8vh;
     font-size: 1.5vh;
     margin-left: 0.2vh;
+}
 
+.button2 {
+    background-color: orange;
+    color: black;
+    height: 3vh;
+    font-size: 1.5vh;
+    margin-left: 0.2vh;
+    border: 2px solid black;
+    border-radius: 1em;
 }
 
 .button1:hover {
@@ -151,187 +46,9 @@ h11 {
     color: deepskyblue;
 }
 
-section.spectacle_title {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2em;
-    padding: 14em;
-    padding-top: 2em;
-    padding-bottom: 0;
-    overflow: auto;
-    width: 70%;
-    height: 100%;
-}
-
-.spectacle_title .project-1>img {
-    height: 50vh;
-    width: 100%;
-    object-fit: cover;
-}
-
-.spectacle_title .project-1>div {
-    position: absolute;
-    display: grid;
-    height: 100%;
-    width: 100%;
-    margin: auto;
-    color: #fb8226;
-    align-content: center;
-    justify-content: center;
-}
-
-.spectacle_title>a>div {
-    position: relative;
-    border: 1px solid gray;
-    height: 99%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.theatre_list {
-    position: relative;
-    display: grid;
-    flex-direction: column;
-    justify-content: space-around;
-    grid-gap: 2em;
-    padding: 2em;
-    overflow: auto;
-    margin-bottom: 1em;
-}
-
-.theatre_list>dl {
-    align-content: center;
-    height: 7%;
-    margin: 1em;
-    color: #2699FB;
-    display: grid;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.theatre_description {
-    display: grid;
-    background: cornflowerblue;
-    width: 60vw;
-    height: 10vh;
-}
-
-.theatre_list>dl>dt {
-    font-size: 2.5em;
-}
-.theatre_list>dl>dd {
-    font-size: 1.5em;
-}
-
-.search_theatre {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 15%;
-}
-.search_theatre>input {
-    height: 2vh;
-    width: 21vh;
-    padding: 0.3vh;
-    margin-right: 0.2vh;
-}
-
-.button_search {
-    background-color: dodgerblue;
-    font-size: 1em;
-    padding: 0.8em;
-}
-
 ::-webkit-scrollbar {
     opacity: 0;
 }
-
-.idk {
-    display: grid;
-    font-size: 4vh;
-    color: blanchedalmond;
-    justify-items: center;
-    margin-block: 4vh;
-}
-
-.scene {
-    position: relative;
-    display: grid;
-    background-color: gold;
-    height: 5vh;
-    width: 28vh;
-    font-size: 2.5vh;
-    align-content: center;
-    justify-content: center;
-}
-
-.booking_places {
-    position: relative;
-    display: grid;
-    height: 28vh;
-    width: 28vh;
-}
-
-.theatre_room {
-    position: relative;
-    display: grid;
-    height: 50%;
-    align-content: center;
-    justify-items: center;
-}
-
-.row_armchair {
-    display: inline-flex;
-    justify-content: center;
-}
-
-.row_armchair>a {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    display: grid;
-    justify-items: center;
-    align-content: center;
-    color: deepskyblue;
-}
-
-.row_armchair>a:hover {
-    color: white;
-}
-
-.armchair {
-
-}
-
-.legenda {
-    position: relative;
-    display: grid;
-    background-color: white;
-    opacity: 0.8;
-    width: 28vh
-}
-
-.legenda>h{
-    position: relative;
-}
-
-.legenda>i1 {
-    color: blue;
-}
-
-.legenda>i2 {
-    color: chartreuse;
-}
-
-.legenda>i3 {
-    color: orange;
-}
-
-.legenda>i>p {
-
-}
-
-
 
 @media only screen and (max-device-width: 420px){
     .container1 {
