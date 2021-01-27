@@ -52,10 +52,11 @@ class SpectacleRepository extends Repository {
 
     public function getTheatersWithSpectacle(int $spectacleID): ?array {
         $stmt = $this->database->connect()->prepare('
-       SELECT t.id_theatre, t.city, t.name FROM spectacle s
-       LEFT JOIN spectacle_theatre st on s.id_spectacle = st.id_spectacle
-       LEFT JOIN theatre t on st.id_theatre = t.id_theatre
-        WHERE s.id_spectacle = ?;
+        SELECT t.id_theatre, t.city, t.name FROM spectacle s
+        LEFT JOIN spectacle_theatre st on s.id_spectacle = st.id_spectacle
+        LEFT JOIN theatre t on st.id_theatre = t.id_theatre
+        WHERE s.id_spectacle = ?
+        ORDER BY t.city;
         ');
 
         $stmt->execute([$spectacleID]);
@@ -78,5 +79,18 @@ class SpectacleRepository extends Repository {
         ');
 
         return $stmt->execute([$seatJSON, $theatreID, $spectacleID]);
+    }
+
+    public function getSpectaclesByTheatre(int $id)
+    {
+        $stmt = $this->database->connect()->prepare('
+        SELECT s.id_spectacle, s.title, s.image FROM theatre t 
+        LEFT JOIN spectacle_theatre st ON t.id_theatre = st.id_theatre
+        LEFT JOIN spectacle s on s.id_spectacle = st.id_spectacle
+        WHERE t.id_theatre = ?;
+        ');
+
+        $stmt->execute([$id]);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }
