@@ -17,6 +17,8 @@ Router::post('logout', 'SecurityController');
 Router::post('register', 'RegisterController');
 Router::post('registerForm', 'RegisterController');
 
+Router::post('bookSeat', 'SecurityController');
+
 Router::get('search', 'SearchController');
 Router::get('searchSearch', 'SearchController');
 
