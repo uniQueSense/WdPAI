@@ -1,0 +1,14 @@
+.images-slide {
+    width: 100vw;
+    height: 40%;
+}
+
+.glide__slide {
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+}
+ .play {
+     height: 30vh;
+     width: 30vh;
+ }

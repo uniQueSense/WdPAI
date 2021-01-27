@@ -1,4 +1,5 @@
 .menu {
+    height: 7%;
     width: 100%;
     border-bottom: 1px solid white;
 }
@@ -25,10 +26,9 @@ li a {
     text-align: center;
     text-decoration: none;
 }
-  
-/* Change the link color to #111 (black) on hover */
+
 li a:hover {
-color: darkorange;
+    color: darkorange;
 }
 
 .logo2 img {

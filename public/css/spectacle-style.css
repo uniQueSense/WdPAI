@@ -1,0 +1,164 @@
+.container-spectacle {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.container-spectacle-first {
+    display: grid;
+    justify-items: center;
+    width: 100%;
+    height: 55%;
+}
+
+.container-spectacle-second {
+    display: grid;
+    justify-items: center;
+    height: 44%;
+    width: 100%;
+    margin-bottom: 1%;
+}
+
+.title {
+    display: grid;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+}
+
+.title>h {
+    padding-block-start: 0.5em;
+    padding-block-end: 0.5em;
+    font-size: 2em;
+    font-weight: bold;
+    color: navajowhite;
+}
+
+.spectacle-img {
+    height: 30vh;
+    width: 30vh;
+    object-fit: cover;
+    margin: 0.5em;
+}
+
+.images-slide>ul {
+    /*list-style-type: none;*/
+    justify-content: center;
+    margin-top: 5vh;
+}
+
+.button-navi {
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    margin: 1vh;
+}
+.button-navigation {
+    background: #2699FB;
+    border: none;
+    color: white;
+    width: 14%;
+    height: 60%;
+    margin: 1%;
+    font-size: 1.3em;
+    border-radius: 0.5em;
+}
+
+.block-spectacle1 {
+    display: none;
+    width: 80%;
+    height: 100%;
+    overflow: auto;
+}
+
+.block-spectacle2 {
+    display: flex;
+    overflow: auto;
+    width: 80%;
+    height: 100%;
+    color: white;
+    font-size: 1.5em;
+}
+
+.block-spectacle3 {
+    display: none;
+    width: 80%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+}
+
+h1 {
+    color: white;
+    align-items: center;
+    justify-items: center;
+}
+
+h11 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: white;
+}
+
+.actors-block1 {
+    display: grid;
+    height: 100%;
+    width: 50%;
+    justify-items: center;
+    align-items: center;
+}
+
+.actors-block2 {
+    display: grid;
+    height: 100%;
+    width: 50%;
+    justify-content: center;
+    overflow: auto;
+}
+
+.actors-block2>p {
+    display: grid;
+    font-size: 1.7em;
+    color: lightyellow;
+}
+
+.non-active {
+    pointer-events: none;
+    cursor: default;
+}
+
+.city-list {
+    padding-right: 1em;
+    color: white;
+    overflow: auto;
+    font-size: 1.6em;
+}
+
+.button-buy {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-25%);
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    border: 1em;
+    font-size: 0.8em;
+    border-radius: 0.4em;
+    background: #2699FB;
+    color: white;
+}
+td {
+    padding-right: 1em;
+}
+
+.colored {
+    color:navajowhite;
+}

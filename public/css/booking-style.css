@@ -1,0 +1,147 @@
+.title {
+    display: grid;
+    height: 10%;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+    color: navajowhite;
+}
+
+.blocks {
+    display: flex;
+    height: 90%;
+    width: 100%;
+    margin: 0;
+}
+
+.legend {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+}
+
+.legend>h {
+    position: absolute;
+    top: 25vh;
+    color: navajowhite;
+    font-size: 2em;
+}
+
+.theatre_room {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 30%;
+}
+
+.confirm input {
+    width: 60%;
+    font-size: 1em;
+    margin: 1em 0;
+    padding: 0.4em;
+    border-radius: 0.5em;
+    border: 3px solid orange;
+}
+
+.confirm button {
+    width: 50%;
+}
+
+.confirm form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirm form p {
+    color: #FFFFFF;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.scene {
+    display: grid;
+    height: 5vh;
+    width: 28vh;
+    background-color: gold;
+    font-size: 2.5vh;
+    align-content: center;
+    justify-content: center;
+}
+
+.booking_places {
+    display: grid;
+    height: 28vh;
+    width: 28vh;
+}
+
+.row_armchair {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.armchair i {
+    color: inherit;
+}
+
+.row_armchair>div {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+}
+
+.armchair i:hover {
+    color: white;
+}
+
+.active {
+    color: rgb(0, 255, 0);
+}
+
+.occupant {
+    color: rgb(255, 123, 0);
+}
+
+.free {
+    color: rgb(135, 206, 250);
+}
+
+.chair {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+}
+.chair i {
+    margin-inline-end: 0.5em;
+}
+
+.armchair i {
+    font-size: 2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+

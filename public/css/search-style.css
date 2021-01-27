@@ -1,0 +1,55 @@
+.search_place {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25%;
+}
+
+.search_place>input {
+    height: 2vh;
+    width: 21vh;
+    padding: 0.3vh;
+    margin-right: 0.2vh;
+}
+
+section.spectacle_title {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2em;
+    padding: 14em;
+    padding-top: 2em;
+    padding-bottom: 0;
+    overflow: auto;
+    height: 100%;
+}
+
+.spectacle_title .project-1>img {
+    height: 50vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.spectacle_title .project-1>div {
+    position: absolute;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    color: #fb8226;
+    align-content: center;
+    justify-content: center;
+}
+
+.spectacle_title>a>div {
+    position: relative;
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.button_search {
+    background-color: dodgerblue;
+    font-size: 1em;
+    padding: 0.8em;
+}
