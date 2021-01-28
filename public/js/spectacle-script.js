@@ -44,7 +44,8 @@ button3.addEventListener("click",function (){
 
 const search = document.querySelector('input[placeholder="Szukaj przedstawienia"]');
 const theatreContainer = document.querySelector('.theatre_list');
-
+button2.style.background = "white";
+button2.style.color = "#2699FB";
 
 function searchHandler () {
     const data = {'actors': search.value};
@@ -63,4 +64,4 @@ function searchHandler () {
     });
 };
 
-document.querySelector('.button-search').addEventListener('click', () => searchHandler())
+document.querySelector('.button-search').addEventListener('click', () => searchHandler());

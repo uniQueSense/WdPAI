@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="/public/css/style_backg.css">
-    <link rel="stylesheet" type="text/css" href="/public/css/menu_style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/background-style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/menu-style.css">
     <link rel="stylesheet" type="text/css" href="/public/css/search-style.css">
 
     <script type="text/javascript" src="/public/js/search.js" defer></script>
@@ -11,12 +11,12 @@
 
 
 <body>
-    <div class="container1">
+    <div class="container">
         <?PHP include 'menu_component.php'?>
 
         <div class="search_place">
             <input name="search" type="text" placeholder="Szukaj przedstawienia">
-            <button class="button-search button1">Szukaj</button>
+            <button class="button-search button4">Szukaj</button>
         </div>
 
         <section class="spectacle_title">

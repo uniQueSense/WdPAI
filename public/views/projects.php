@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="/public/css/style_backg.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/background-style.css">
     <link rel="stylesheet" type="text/css" href="/public/css/style.css">
-    <link rel="stylesheet" type="text/css" href="/public/css/menu_style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/menu-style.css">
     <link rel="stylesheet" type="text/css" href="/public/css/glide-slide-main-page-style.css">
 
     <script src="/public/js/glidescript.js" defer></script>
@@ -18,7 +18,7 @@
 
 <body>
 
-    <div class="container1">
+    <div class="container">
         <?PHP include 'menu_component.php'?>
 
         <div class="main">

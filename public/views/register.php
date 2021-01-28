@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/menu_style.css">
-    <link rel="stylesheet" type="text/css" href="public/css/register_style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/background-style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/register-style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/menu-style.css">
 
-    <script type="text/javascript" src="./public/js/script.js" defer></script>
-    <script type="text/javascript" src="./public/js/registerscript.js" defer></script>
+
+    <script type="text/javascript" src="/public/js/script.js" defer></script>
+    <script type="text/javascript" src="/public/js/registerscript.js" defer></script>
     <script src="https://kit.fontawesome.com/7186f6c2cc.js" crossorigin="anonymous"></script>
 
     <title>Register</title>
@@ -12,11 +14,11 @@
 </head>
 
 <body>
-    <div class="container1">
+    <div class="container">
         <?PHP include 'menu_component.php'?>
 
         <div class="page_location">
-            <img class="state" src="public/img/pasek.svg">
+            <img class="state" src="/public/img/pasek.svg">
         </div>
 
         <div class="register_container">

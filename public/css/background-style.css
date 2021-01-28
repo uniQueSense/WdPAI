@@ -7,7 +7,7 @@ body {
     font-family: sans-serif;
 }
 
-.container1 {
+.container {
     margin: 0;
     width: 100vw;
     height: 100vh;
@@ -21,7 +21,7 @@ body {
     margin-bottom: 1%;
 }
 
-.button1 {
+.button4 {
     background-color: deepskyblue;
     color: white;
     height: 3vh;
@@ -30,7 +30,7 @@ body {
     margin-left: 0.2vh;
 }
 
-.button2 {
+.button5 {
     background-color: orange;
     color: black;
     height: 3vh;
@@ -51,7 +51,7 @@ body {
 }
 
 @media only screen and (max-device-width: 420px){
-    .container1 {
+    .container {
         flex-direction: column;
         width: 130vw;
         height: 130vh;

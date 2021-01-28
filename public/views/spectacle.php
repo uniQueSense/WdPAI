@@ -7,8 +7,8 @@ if( ! isset($spectacle)) {
 ?>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="/public/css/menu_style.css">
-    <link rel="stylesheet" type="text/css" href="/public/css/style_backg.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/menu-style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/background-style.css">
     <link rel="stylesheet" type="text/css" href="/public/css/spectacle-style.css">
     <link rel="stylesheet" type="text/css" href="/public/css/glide-slide-spectacle-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.min.css">

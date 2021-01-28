@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="/public/css/menu_style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/menu-style.css">
     <link rel="stylesheet" type="text/css" href="/public/css/booking-style.css">
-    <link rel="stylesheet" type="text/css" href="/public/css/style_backg.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/background-style.css">
 
     <script type="text/javascript" src="/public/js/booking-script.js" defer></script>
     <script src="https://kit.fontawesome.com/7186f6c2cc.js" crossorigin="anonymous"></script>
@@ -13,7 +13,7 @@
 
 <body>
 
-    <div class="container1">
+    <div class="container">
         <?PHP include 'menu_component.php' ?>
 
         <div class="container-content">
@@ -30,15 +30,15 @@
                     <div class="chair free"><i class="fas fa-chair"></i><p>Wolne</p></div>
                 </div>
 
-                <div class="theatre_room">
+                <div class="theatre-room">
 
                     <div class="scene">
                         <h1>SCENA</h1>
                     </div>
 
-                    <div class="booking_places">
+                    <div class="booking-places">
 
-                        <div class="row_armchair">
+                        <div class="row-armchair">
 
                                 <div class="armchair"><i id="1/1" class="fas fa-chair"></i></div>
 
@@ -47,7 +47,7 @@
                                 <div class="armchair"><i id="1/3" class="fas fa-chair"></i></div>
 
                         </div>
-                        <div class="row_armchair">
+                        <div class="row-armchair">
 
                                 <div class="armchair"><i id="2/1" class="fas fa-chair"></i></div>
 
@@ -56,7 +56,7 @@
                                 <div class="armchair"><i id="2/3" class="fas fa-chair"></i></div>
 
                         </div>
-                        <div class="row_armchair">
+                        <div class="row-armchair">
 
                                 <div class="armchair"><i id="3/1" class="fas fa-chair"></i></div>
 
@@ -78,7 +78,7 @@
                         <input name="Sid" type="hidden" value="<?= $id['Tid'] ?>"/>
                         <input id="row" type="hidden" name="seat_row" value="">
                         <input id="column" type="hidden" name="seat_col" value="">
-                        <button class="button2" type="submit">Zatwierdź</button>
+                        <button class="button5" type="submit">Zatwierdź</button>
                     </form>
                 </div>
             </div>
@@ -94,21 +94,21 @@
 </template>
 
 <template id="seats-div">
-    <div class="booking_places">
-        <div class="row_armchair">
-            <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
-            <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
-            <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+    <div class="booking-places">
+        <div class="row-armchair">
+            <div class="armchair"><i class="fas fa-chair"></i></div>
+            <div class="armchair"><i class="fas fa-chair"></i></div>
+            <div class="armchair"><i class="fas fa-chair"></i></div>
         </div>
         <div class="row_armchair">
-            <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
-            <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
-            <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+            <div class="armchair"><i class="fas fa-chair"></i></div>
+            <div class="armchair"><i class="fas fa-chair"></i></div>
+            <div class="armchair"><i class="fas fa-chair"></i></div>
         </div>
         <div class="row_armchair">
-            <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
-            <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
-            <a href="#"><div class="armchair"><i class="fas fa-chair"></i></div></a>
+            <div class="armchair"><i class="fas fa-chair"></i></div>
+            <div class="armchair"><i class="fas fa-chair"></i></div>
+            <div class="armchair"><i class="fas fa-chair"></i></div>
 
         </div>
 
