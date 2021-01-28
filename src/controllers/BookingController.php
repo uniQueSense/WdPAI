@@ -30,13 +30,14 @@ class BookingController extends AppController {
         $password = $_POST['passwd'];
         $confirmPassword = $_POST['conf-passwd'];
 
+
         $repo = new UserRepository();
         $user = $repo->getUserById($_COOKIE['id']);
 
-        if( ! $password === $confirmPassword) {
+        if( ! ($password === $confirmPassword)) {
+
             return $this->render('aboute', ['messages'=> ['ZŁE HASŁO']]);
         } else {
-
             if(! password_verify($password, $user->getPassword())) {
                 return $this->render('aboute', ['messages' => ['ZŁE HASŁO']]);
             }

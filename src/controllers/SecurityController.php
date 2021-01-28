@@ -8,8 +8,11 @@ class SecurityController extends AppController
     }
 
     public function logout() {
+        unset($_COOKIE["email"]);
+        unset($_COOKIE["id"]);
         setcookie("email",null,-1);
         setcookie("id",null,-1);
+
         Router::run('recommendedSpectacle');
 
     }
@@ -36,7 +39,7 @@ class SecurityController extends AppController
             return $this->render('login',['messages' => ['Zły email!']]);
         }
 
-        if (password_verify($password, $user->getPassword())) {
+        if (! password_verify($password, $user->getPassword())) {
             return $this->render('login',['messages' => ['Złe hasło!']]);
         }
 

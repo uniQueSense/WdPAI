@@ -29,7 +29,11 @@ class RegisterController extends AppController
 
         if ($repassword == $password){
             $password = password_hash($password, PASSWORD_ARGON2ID);
-            $user = $userRepository->setUser($name, $surname, $email, $password, $city, $street, $home_number, $phone_number);
+            try {
+                $user = $userRepository->setUser($name, $surname, $email, $password, $city, $street, $home_number, $phone_number);
+            } catch(Exception $exception) {
+                return $this->render('register', ['messages' => ['Nie udało się!']]);
+            }
         }
         else{
             return $this->render('register', ['messages' => ['Niepoprawne hasła!!']]);

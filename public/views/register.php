@@ -14,6 +14,11 @@
 </head>
 
 <body>
+<?PHP
+if( isset($messages)) {
+    include "error_message.php";
+}
+?>
     <div class="container">
         <?PHP include 'menu_component.php'?>
 
