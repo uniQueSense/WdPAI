@@ -75,7 +75,7 @@ class BookingController extends AppController {
         return $mapped;
     }
 
-    private function updateSeatJson($json, $seatCol, $seatRow): bool|string
+    private function updateSeatJson($json, $seatCol, $seatRow)
     {
         $newJson = [];
         $newJson['seats_max'] = (int)$json['seats_max'];
