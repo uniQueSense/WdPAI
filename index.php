@@ -29,7 +29,7 @@ Router::get('recommendedSpectacle', 'SpectacleController');
 
 Router::get('chosenSpectacle', 'SpectacleController');
 
-Router::get('booking', 'DefaultController');
+Router::get('booking', 'BookingController');
 
 Router::get('aboute', 'DefaultController');
 

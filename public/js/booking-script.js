@@ -3,11 +3,15 @@ const rowInput = document.querySelector('#row');
 const columnInput = document.querySelector('#column');
 const selectedColor = 'rgb(0, 255, 0)'
 const notSelectedColor = 'rgb(135, 206, 250)'
+const notAvailable ='rgb(255, 123, 0)'
 let currentlySelected = null
 
-chairs.forEach(chair => chair.style.color = notSelectedColor);
+//chairs.forEach(chair => chair.style.color = notSelectedColor);
 
 chairs.forEach( chair => chair.addEventListener('click', function() {
+    if(chair.style.color === notAvailable){
+        return;
+    }
     if(currentlySelected !== null) {
         changeColor(currentlySelected);
     }

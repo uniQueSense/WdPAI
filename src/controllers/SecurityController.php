@@ -27,16 +27,23 @@ class SecurityController extends AppController
         $confirmPassword = $_POST['conf-passwd'];
 
         $repo = new UserRepository();
-        //$user = $repo->getUser($_SESSION[])
+        $user = $repo->getUserById($_COOKIE['id']);
+
+        if( ! $password === $confirmPassword) {
+            return $this->render('aboute', ['messages'=> ['error!']]);
+        } else {
+            if(!$this->checkPassword($password, $user->getPassword()))
+                return $this->render('aboute', ['messages'=> ['error!']]);
+        }
 
         $repo = new SpectacleRepository();
-        $json = $repo->getSeats($Sid, $Tid);
+        $json = $repo->getSeats($Sid,$Tid);
         $updatedJson = $this->updateSeatJson($json, $seatCol, $seatRow);
-        $repo->updateSeats($updatedJson, $Sid, $Tid);
+        if(! $repo->updateSeats($updatedJson, $Sid, $Tid)) {
+            echo 'xD';
+            die();
+        }
         //TODO check passwords
-       /* if($password === $confirmPassword) {
-            //if($this->checkPassword($password))
-        }*/
         //TODO assign booked seat to user!
         //TODO return view
         return Router::run('recommendedSpectacle');

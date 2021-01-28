@@ -21,29 +21,18 @@ class DefaultController extends AppController {
         $this->render('aboute');
     }
 
-    public function booking()
-    {   if( !isset($_COOKIE['id']) ) {
-        return $this->render('login');
-    }
-        $theatreID = $_GET['Tid'];
-        $spectacleID = $_GET['Sid'];
-
-        $repo = new SpectacleRepository();
-        $seats = $repo->getSeats($spectacleID, $theatreID);
-        $this->render('booking', ['seats' => $seats, 'id' => ['Sid' => $spectacleID, 'Tid' => $theatreID]]);
-    }
 
     public function index() {
         $this->spectacl();
     }
-    public function spectacl()
-    {
-        $performencesRepository = new SearchRepository();
-        $spectacle = $performencesRepository->getAllPerformances();
-        var_dump($spectacle);
-
-        $this->render('spectacl', ['spectacle'=>$spectacle]);
-    }
+//    public function spectacl()
+//    {
+//        $performencesRepository = new SearchRepository();
+//        $spectacle = $performencesRepository->getAllPerformances();
+//        var_dump($spectacle);
+//
+//        $this->render('spectacl', ['spectacle'=>$spectacle]);
+//    }
 
     public function test()
     {

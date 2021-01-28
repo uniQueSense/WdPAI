@@ -19,7 +19,7 @@
         <div class="container-content">
 
             <div class="title">
-                <h1>Rezerwacja miejsc na spektakl: <?= $title['title'] ?></h1>
+                <h1>Rezerwacja miejsc na spektakl</h1>
             </div>
 
             <div class="blocks">
@@ -38,14 +38,26 @@
 
                     <div class="booking-places">
 
-                        <div class="row-armchair">
+                        <?PHP foreach ($seats as $row): ?>
+                            <div class="row-armchair">
+                                <?PHP foreach ($row as $seat): ?>
 
-                                <div class="armchair"><i id="1/1" class="fas fa-chair"></i></div>
+                                    <?PHP if($seat !== null): ?>
+                                        <div class="armchair" style="color: rgb(135, 206, 250)"><i id="<?= $seat['row']?>/<?=$seat['column'] ?>" class="fas fa-chair" ></i></div>
+                                    <?PHP else: ?>
+                                        <div class="armchair" style="color: rgb(255, 123, 0)"><i class="fas fa-chair occupant"></i></div>
+                                    <?PHP endif;?>
+                                <?PHP endforeach;?>
+                            </div>
+                        <?PHP endforeach;?>
 
-                                <div class="armchair"><i id="1/2" class="fas fa-chair"></i></div>
 
-                                <div class="armchair"><i id="1/3" class="fas fa-chair"></i></div>
+                        <!--<div class="row-armchair">
+                            <div class="armchair"><i id="1/1" class="fas fa-chair"></i></div>
 
+                            <div class="armchair"><i id="1/2" class="fas fa-chair"></i></div>
+
+                            <div class="armchair"><i id="1/3" class="fas fa-chair"></i></div>
                         </div>
                         <div class="row-armchair">
 
@@ -64,7 +76,7 @@
 
                                 <div class="armchair"><i id="3/3" class="fas fa-chair"></i></div>
 
-                        </div>
+                        </div>-->
                     </div>
                 </div>
 
@@ -74,8 +86,8 @@
                         <input name="passwd" placeholder="password" type="password"/>
                         <p>Powtórz hasło</p>
                         <input name="conf-passwd" placeholder="confirm password" type="password"/>
-                        <input name="Tid" type="hidden" value="<?= $id['Sid'] ?>"/>
-                        <input name="Sid" type="hidden" value="<?= $id['Tid'] ?>"/>
+                        <input name="Tid" type="hidden" value="<?= $id['Tid'] ?>"/>
+                        <input name="Sid" type="hidden" value="<?= $id['Sid'] ?>"/>
                         <input id="row" type="hidden" name="seat_row" value="">
                         <input id="column" type="hidden" name="seat_col" value="">
                         <button class="button5" type="submit">Zatwierdź</button>
