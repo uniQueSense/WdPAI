@@ -15,11 +15,6 @@ class BookingController extends AppController {
         $seats = $repo->getSeats($spectacleID, $theatreID);
 
         $seatsMapped = $this->mapSeats($seats['seats']);
-        for ($i =1; $i<=3; $i++){
-            for ($j =1; $j<=3; $j++){
-                if( $seatsMapped[$i][$j] === null) echo 'null ';
-            }
-        }
         $this->render('booking', ['seats' => $seatsMapped, 'id' => ['Sid' => $spectacleID, 'Tid' => $theatreID]]);
     }
 
