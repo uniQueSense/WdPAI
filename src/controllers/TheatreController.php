@@ -11,4 +11,12 @@ class TheatreController extends AppController {
 
         $this->render('theatre', ['theatre'=>$place]);
     }
+
+    public function theatreDetails() {
+        $id = $_GET['id'];
+        $repo = new SpectacleRepository();
+        $spectacles = $repo->getSpectaclesByTheatre($id);
+
+        //TODO RENDER VIEW
+    }
 }

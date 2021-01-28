@@ -6,7 +6,7 @@
     </div>
 
     <ul class="menubtns" style="float:right">
-        <li><a href="/projects">Strona Główna</a></li>
+        <li><a href="/recommendedSpectacle">Strona Główna</a></li>
         <li><a href="/search">Szukaj spektaklu</a></li>
         <li><a href="/theatre">Teatry</a></li>
         <li><a href="/aboute">O nas</a></li>

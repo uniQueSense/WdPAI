@@ -8,10 +8,12 @@ class User
     private $name;
     private $surname;
     private $id_user;
-    private $city;
+
+    //TODO
+   /* private $city;
     private $street;
     private $home_number;
-    private $phone_number;
+    private $phone_number;*/
 
 
 
@@ -24,6 +26,8 @@ class User
         $this->name = $name;
         $this->surname = $surname;
     }
+
+
 
 
     public function getIdUser(): int

@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    background: radial-gradient(circle, rgba(128,0,0,1) 5%, rgba(19,0,0,1) 80%);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+.container {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-content {
+    height: 92%;
+    width: 100%;
+    margin-bottom: 1%;
+}
+
+.button4 {
+    background-color: deepskyblue;
+    color: white;
+    height: 3vh;
+    width: 8vh;
+    font-size: 1.5vh;
+    margin-left: 0.2vh;
+}
+
+.button5 {
+    background-color: orange;
+    color: black;
+    height: 3vh;
+    font-size: 1.5vh;
+    margin-left: 0.2vh;
+    border: 2px solid black;
+    border-radius: 1em;
+}
+
+.button1:hover {
+    transition-duration: 0.3s;
+    background-color: white;
+    color: deepskyblue;
+}
+
+::-webkit-scrollbar {
+    opacity: 0;
+}
+
+.error-message {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #00000050;
+}
+
+.error-div {
+    background: #000000;
+    border: 1px solid magenta;
+    border-radius: 3em;
+    color: magenta;
+    width: 20%;
+    height: 20%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and (max-device-width: 420px){
+    .container {
+        flex-direction: column;
+        width: 130vw;
+        height: 130vh;
+    }
+
+    * {
+        font-size: 50px;
+    }
+
+    .login_container {
+        height: 3em;
+    }
+
+    .logo {
+        height: 28em;
+    }
+
+    .form {
+        margin: auto;
+    }
+}

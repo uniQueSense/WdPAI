@@ -21,25 +21,5 @@ class DefaultController extends AppController {
         $this->render('aboute');
     }
 
-    public function booking()
-    {
-        $this->render('booking');
-    }
 
-    public function index() {
-        $this->spectacl();
-    }
-    public function spectacl()
-    {
-        $performencesRepository = new SearchRepository();
-        $spectacle = $performencesRepository->getAllPerformances();
-        var_dump($spectacle);
-
-        $this->render('spectacl', ['spectacle'=>$spectacle]);
-    }
-
-    public function test()
-    {
-        $this->render('test');
-    }
 }

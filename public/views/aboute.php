@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/style_backg.css">
-    <link rel="stylesheet" type="text/css" href="public/css/menu_style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/background-style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/menu-style.css">
 
     <script src="https://kit.fontawesome.com/7186f6c2cc.js" crossorigin="anonymous"></script>
     <title>Szukaj</title>
@@ -10,12 +10,14 @@
 
 
 <body>
-    <div class="container1">
+    <div class="container">
         <?PHP include 'menu_component.php'?>
 
+        <?PHP
+        if( isset($messages)) {
+            include "error_message.php";
+        }
+        ?>
 
-</div>
+    </div>
 </body>
-
-
-</html>

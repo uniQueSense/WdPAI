@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/style_backg.css">
-    <link rel="stylesheet" type="text/css" href="public/css/menu_style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/background-style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/menu-style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/theatre-style.css">
 
     <script src="https://kit.fontawesome.com/7186f6c2cc.js" crossorigin="anonymous"></script>
     <title>Szukaj</title>
@@ -10,21 +11,23 @@
 
 
 <body>
-    <div class="container1">
+    <div class="container">
         <?PHP include 'menu_component.php'?>
 
         <div class="search_theatre">
             <input name="search" type="text" placeholder="Wpisz miasto">
-            <button class="button button1">Szukaj</button>
+            <button class="button button4">Szukaj</button>
         </div>
 
         <section class="theatre_list">
-            <?php
-            foreach ($theatre as $project): ?>
-                <div class="theatre1" id="<? $project->getIdTheatre();?>">
+            <?php foreach ($theatre as $project): ?>
+                <div class="theatre_description" id="<? $project->getIdTheatre();?>">
                     <ul>
-                        <li><a href="#" ><h><?= $project->getName(); ?></h></a></li>
-                        <p><?= $project->getCity(), " ", $project->getStreet(), " ", $project->getNumber(); ?></p>
+                        <li>
+                            <a href="#" ><h1><?= $project->getName(); ?></h1></a>
+                            <p>Miasto: <?= $project->getCity(); ?></p>
+                            <p>Ulica: <?= $project->getStreet()." ". $project->getNumber(); ?></p>
+                        </li>
 
                     </ul>
                 </div>
@@ -32,6 +35,3 @@
         </section>
     </div>
 </body>
-
-
-</html>

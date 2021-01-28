@@ -27,9 +27,8 @@ class RegisterController extends AppController
         $home_number = $_POST["home_number"];
         $phone_number = $_POST["phone_number"];
 
-        //var_dump($_POST);
-        //die();
         if ($repassword == $password){
+            $password = password_hash($password, PASSWORD_ARGON2ID);
             $user = $userRepository->setUser($name, $surname, $email, $password, $city, $street, $home_number, $phone_number);
         }
         else{

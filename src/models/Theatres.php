@@ -7,7 +7,7 @@ class Theatres {
     private $street;
     private $number;
 
-    public function __construct($id_theatre, $name, $city, $number, $street) {
+    public function __construct($id_theatre, $name, $city, $street, $number) {
 
         $this->id_theatre = $id_theatre;
         $this->name = $name;

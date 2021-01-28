@@ -1,5 +1,4 @@
 var input = document.querySelector('#options-focus-at-input')
-var checkbox = document.querySelector('#options-focus-at-checkbox')
 
 var glide = new Glide('.glide', {
     type: 'carousel',

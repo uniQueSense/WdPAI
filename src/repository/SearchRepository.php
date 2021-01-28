@@ -1,19 +1,16 @@
 <?php
 
-require_once "Repository.php";
-require_once __DIR__."/../models/Performances.php";
-
 class SearchRepository extends Repository
 {
     public function getAllPerformances(): array {
         $stmt = $this->database->connect()->prepare('
-            SELECT * FROM spectacle
+            SELECT * FROM spectacle;
         ');
         $stmt->execute();
 
         $spectacles = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        $array = array();
+        $array = [];
 
         foreach ($spectacles as $spectacle){
 
@@ -35,11 +32,9 @@ class SearchRepository extends Repository
         $stmt = $this->database->connect()->prepare('
         SELECT * FROM spectacle WHERE LOWER(title) LIKE :search');
 
-        $stmt->bindParam(':search', $searchString, PDO::PARAM_STR);
+        $stmt->bindParam(':search', $searchString);
         $stmt->execute();
 
-        $spectacles =$stmt->fetchAll(PDO::FETCH_ASSOC);
-
-        return $spectacles;
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }

@@ -29,7 +29,6 @@ search.addEventListener("keyup", (e) => {
 
 function loadPerformances(performances) {
     performances.forEach(spectacle => {
-        console.log(spectacle);
         createPerformances(spectacle);
     })
 
@@ -41,8 +40,9 @@ function createPerformances (spectacle) {
     const clone = template.content.cloneNode(true);
     const image = clone.querySelector("img");
     const title = clone.querySelector("h2");
+    const json = JSON.parse(spectacle.image);
 
-    image.src = `/public/resources/${spectacle.image}`;
+    image.src = json[0].route;
     title.innerHTML = spectacle.title;
 
     searchContainer.appendChild(clone);
