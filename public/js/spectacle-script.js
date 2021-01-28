@@ -6,7 +6,7 @@ const button1 = document.querySelector(".button-cast");
 const button2 = document.querySelector(".button-description");
 const button3 = document.querySelector(".button-cost");
 
-const unmount = () => {
+function unmount() {
     block1.style.display = "none";
     block2.style.display = "none";
     block3.style.display = "none";
@@ -18,7 +18,7 @@ const unmount = () => {
     button3.style.color = "white"
 }
 
-const fun = (number) => {
+function fun (number) {
     unmount();
     switch (number) {
         case 1:
@@ -39,11 +39,11 @@ const fun = (number) => {
     }
 }
 
-button1.addEventListener("click",fun(1));
+button1.addEventListener("click",()=>fun(1));
 
-button2.addEventListener("click",fun(2));
+button2.addEventListener("click",()=>fun(2));
 
-button3.addEventListener("click",fun(3));
+button3.addEventListener("click",()=>fun(3));
 
 const search = document.querySelector('input[placeholder="Szukaj przedstawienia"]');
 const theatreContainer = document.querySelector('.theatre_list');
@@ -66,5 +66,3 @@ function searchHandler () {
         loadPerformances(performances)
     });
 };
-
-document.querySelector('.button-search').addEventListener('click', () => searchHandler());

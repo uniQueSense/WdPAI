@@ -15,13 +15,6 @@ class BookingController extends AppController {
         $seats = $repo->getSeats($spectacleID, $theatreID);
 
         $seatsMapped = $this->mapSeats($seats['seats']);
-        for ($i =1; $i<=3; $i++){
-            for ($j =1; $j<=3; $j++){
-                if( $seatsMapped[$i][$j] === null) echo 'null ';
-                else echo $seatsMapped[$i][$j];
-            }
-            echo '<br>';
-        }
         $this->render('booking', ['seats' => $seatsMapped, 'id' => ['Sid' => $spectacleID, 'Tid' => $theatreID]]);
     }
 
@@ -37,13 +30,14 @@ class BookingController extends AppController {
         $password = $_POST['passwd'];
         $confirmPassword = $_POST['conf-passwd'];
 
+
         $repo = new UserRepository();
         $user = $repo->getUserById($_COOKIE['id']);
 
-        if( ! $password === $confirmPassword) {
+        if( ! ($password === $confirmPassword)) {
+
             return $this->render('aboute', ['messages'=> ['ZŁE HASŁO']]);
         } else {
-
             if(! password_verify($password, $user->getPassword())) {
                 return $this->render('aboute', ['messages' => ['ZŁE HASŁO']]);
             }
@@ -75,7 +69,7 @@ class BookingController extends AppController {
         return $mapped;
     }
 
-    private function updateSeatJson($json, $seatCol, $seatRow): bool|string
+    private function updateSeatJson($json, $seatCol, $seatRow)
     {
         $newJson = [];
         $newJson['seats_max'] = (int)$json['seats_max'];

@@ -28,8 +28,8 @@ if( isset($messages)) {
 
             <form class="login" action="loginForm" method="POST">
 
-                <input name="email" type="text" placeholder="email@email.com">
-                <input name="password" type="password" placeholder="password">
+                <input name="email" type="email" placeholder="email@email.com" required="required">
+                <input name="password" type="password" placeholder="password" required="required">
 
                 <div class="button-login">
                     <button type="submit"><i class="fas fa-arrow-right"></i></button>
