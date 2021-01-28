@@ -7,7 +7,7 @@ class SpectacleController extends AppController {
         $spectacleRepository = new SpectacleRepository();
         $spectacle = $spectacleRepository->getRandomSpectacle();
 
-        $this->render('projects', ['spectacle'=>$spectacle]);
+        $this->render('homepage', ['spectacle'=>$spectacle]);
     }
 
     public function chosenSpectacle() {
@@ -16,7 +16,8 @@ class SpectacleController extends AppController {
         $id_spectacle = $_GET["id"];
         $thisSpectacle = $spectacleRepository->getOnceSpectacle($id_spectacle);
         $actors = $spectacleRepository->getSpectacleWithActors($id_spectacle);
-        $theatres = $spectacleRepository->getTheatersWithSpectacle($id_spectacle); //teatry,mista, nazwy rtc.
+        $theatres = $spectacleRepository->getTheatersWithSpectacle($id_spectacle); //teatry,miasta, nazwy etc.
+
         foreach ($theatres as $i => $theatre) {
             $seats = $spectacleRepository->getSeats($id_spectacle, $theatre['id_theatre']);
             if(! empty($seats)) {
@@ -25,17 +26,11 @@ class SpectacleController extends AppController {
                     unset($theatres[$i]);
                 } else {
                     $theatres[$i]['free_seats'] = $freeSeats;
-            }
+                }
             }
         }
 
-
-       if (empty($thisSpectacle)) {
-           return ;
-       }
-
         $this->render('spectacle', ['spectacle'=>$thisSpectacle, 'actors' => $actors, 'theatres' => $theatres]);
-
     }
 
 }

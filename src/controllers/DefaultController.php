@@ -22,23 +22,4 @@ class DefaultController extends AppController {
     }
 
 
-    public function index() {
-        $this->spectacl();
-    }
-//    public function spectacl()
-//    {
-//        $performencesRepository = new SearchRepository();
-//        $spectacle = $performencesRepository->getAllPerformances();
-//        var_dump($spectacle);
-//
-//        $this->render('spectacl', ['spectacle'=>$spectacle]);
-//    }
-
-    public function test()
-    {
-        $repo = new SpectacleRepository();
-        $test = $repo->getSeats(1,1);
-        var_dump($test);
-        die();
-    }
 }

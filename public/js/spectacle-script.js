@@ -6,41 +6,46 @@ const button1 = document.querySelector(".button-cast");
 const button2 = document.querySelector(".button-description");
 const button3 = document.querySelector(".button-cost");
 
-button1.addEventListener("click",function (){
-    block1.style.display = "flex";
+const fun = (number) => {
+    unmount();
+    switch (number) {
+        case 1:
+            block1.style.display='flex';
+            button1.style.color = "#2699FB";
+            button1.style.background = "white"
+            return;
+        case 2:
+            block2.style.display='flex';
+            button2.style.color = "#2699FB";
+            button2.style.background = "white"
+            return;
+        case 3:
+            block3.style.display='flex';
+            button3.style.color = "#2699FB";
+            button3.style.background = "white"
+            return;
+    }
+}
+
+button1.addEventListener("click",fun(1));
+
+button2.addEventListener("click",fun(2));
+
+button3.addEventListener("click",fun(3));
+
+
+
+const unmount = () => {
+    block1.style.display = "none";
     block2.style.display = "none";
     block3.style.display = "none";
-    button1.style.background = "white";
-    button1.style.color = "#2699FB"
+    button1.style.background = "#2699FB";
+    button1.style.color = "white"
     button2.style.background = "#2699FB";
     button2.style.color = "white"
     button3.style.background = "#2699FB";
     button3.style.color = "white"
-});
-
-button2.addEventListener("click",function (){
-    block1.style.display = "none";
-    block2.style.display = "grid";
-    block3.style.display = "none";
-    button1.style.background = "#2699FB";
-    button1.style.color = "white"
-    button2.style.background = "white";
-    button2.style.color = "#2699FB"
-    button3.style.background = "#2699FB";
-    button3.style.color = "white"
-});
-
-button3.addEventListener("click",function (){
-    block1.style.display = "none";
-    block2.style.display = "none";
-    block3.style.display = "flex";
-    button1.style.background = "#2699FB";
-    button1.style.color = "white"
-    button2.style.background = "#2699FB";
-    button2.style.color = "white"
-    button3.style.background = "white";
-    button3.style.color = "#2699FB"
-});
+    }
 
 const search = document.querySelector('input[placeholder="Szukaj przedstawienia"]');
 const theatreContainer = document.querySelector('.theatre_list');

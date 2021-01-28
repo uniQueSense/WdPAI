@@ -1,14 +1,12 @@
 <?php
 
-require_once "Repository.php";
-require_once __DIR__."/../models/User.php";
 class UserRepository extends Repository
 {
     public function getUser(string $email): ?User {
         $stmt = $this->database->connect()->prepare('
-            SELECT * FROM public.users WHERE email = :email
+            SELECT * FROM public.users WHERE email = :email;
         ');
-        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+        $stmt->bindParam(':email', $email);
         $stmt->execute();
 
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -71,9 +69,9 @@ class UserRepository extends Repository
 
     public function getUserById(int $Id): ?User {
         $stmt = $this->database->connect()->prepare('
-            SELECT * FROM users WHERE id_user = :id
+            SELECT * FROM users WHERE id_user = :id;
         ');
-        $stmt->bindParam(':id', $Id, PDO::PARAM_STR);
+        $stmt->bindParam(':id', $Id);
         $stmt->execute();
 
         $user = $stmt->fetch(PDO::FETCH_ASSOC);

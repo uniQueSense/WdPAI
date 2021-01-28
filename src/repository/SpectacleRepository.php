@@ -1,8 +1,5 @@
 <?
 
-require_once "Repository.php";
-require_once  __DIR__.'/../models/Performances.php';
-
 class SpectacleRepository extends Repository {
 
     public function getRandomSpectacle(): ?array {
@@ -13,6 +10,7 @@ class SpectacleRepository extends Repository {
         $stmt->execute();
 
         $spectacles = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $array = [];
 
         foreach ($spectacles as $spectacle){
 
@@ -33,9 +31,7 @@ class SpectacleRepository extends Repository {
         SELECT * FROM spectacle WHERE id_spectacle = ?');
 
         $stmt->execute([$int]);
-        $spectacle = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-        return $spectacle;
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     }
 
