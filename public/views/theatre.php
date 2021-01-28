@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" type="text/css" href="public/css/style_backg.css">
-    <link rel="stylesheet" type="text/css" href="public/css/menu_style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/background-style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/menu-style.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/theatre-style.css">
 
     <script src="https://kit.fontawesome.com/7186f6c2cc.js" crossorigin="anonymous"></script>
     <title>Szukaj</title>
@@ -10,47 +11,27 @@
 
 
 <body>
-    <div class="container1">
+    <div class="container">
         <?PHP include 'menu_component.php'?>
 
         <div class="search_theatre">
             <input name="search" type="text" placeholder="Wpisz miasto">
-            <button class="button button1">Szukaj</button>
+            <button class="button button4">Szukaj</button>
         </div>
 
         <section class="theatre_list">
-            <dl>
-                <dt><a href="#">Teatr1</a></dt>
-                <dd>wjunfwinfewofniewnofonijhbugyvfctvghbnjimnihbugvyfbhunijbugvyfctvghbjnkhbgvcfvhbjnkhbgvfhbjnkin</dd>
-                <dt>Teatr2</dt>
-                <dd>wjunfwinfewofniewnofonijhbugyvfctvghbnjimnihbugvyfbhunijbugvyfctvghbjnkhbgvcfvhbjnkhbgvfhbjnkin</dd>
-                <dt>Teatr3</dt>
-                <dd>wjunfwinfewofniewnofonijhbugyvfctvghbnjimnihbugvyfbhunijbugvyfctvghbjnkhbgvcfvhbjnkhbgvfhbjnkin</dd>
-                <dt>Teatr4</dt>
-                <dd>wjunfwinfewofniewnofonijhbugyvfctvghbnjimnihbugvyfbhunijbugvyfctvghbjnkhbgvcfvhbjnkhbgvfhbjnkin</dd>
-                <dt>Teatr5</dt>
-                <dd>wjunfwinfewofniewnofonijhbugyvfctvghbnjimnihbugvyfbhunijbugvyfctvghbjnkhbgvcfvhbjnkhbgvfhbjnkin</dd>
-                <dt>Teatr6</dt>
-                <dd>wjunfwinfewofniewnofonijhbugyvfctvghbnjimnihbugvyfbhunijbugvyfctvghbjnkhbgvcfvhbjnkhbgvfhbjnkin</dd>
-                <dt>Teatr7</dt>
-                <dd>wjunfwinfewofniewnofonijhbugyvfctvghbnjimnihbugvyfbhunijbugvyfctvghbjnkhbgvcfvhbjnkhbgvfhbjnkin</dd>
-                <dt>Teatr1</dt>
-                <dd>wjunfwinfewofniewnofonijhbugyvfctvghbnjimnihbugvyfbhunijbugvyfctvghbjnkhbgvcfvhbjnkhbgvfhbjnkin</dd>
-                <dt>Teatr1</dt>
-                <dd>wjunfwinfewofniewnofonijhbugyvfctvghbnjimnihbugvyfbhunijbugvyfctvghbjnkhbgvcfvhbjnkhbgvfhbjnkin</dd>
-                <dt>Teatr1</dt>
-                <dd>wjunfwinfewofniewnofonijhbugyvfctvghbnjimnihbugvyfbhunijbugvyfctvghbjnkhbgvcfvhbjnkhbgvfhbjnkin</dd>
-                <dt>Teatr1</dt>
-                <dd>wjunfwinfewofniewnofonijhbugyvfctvghbnjimnihbugvyfbhunijbugvyfctvghbjnkhbgvcfvhbjnkhbgvfhbjnkin</dd>
-                <dt>Teatr1</dt>
-                <dd>wjunfwinfewofniewnofonijhbugyvfctvghbnjimnihbugvyfbhunijbugvyfctvghbjnkhbgvcfvhbjnkhbgvfhbjnkin</dd>
-                <dt>Teatr1</dt>
-                <dd>wjunfwinfewofniewnofonijhbugyvfctvghbnjimnihbugvyfbhunijbugvyfctvghbjnkhbgvcfvhbjnkhbgvfhbjnkin</dd>
+            <?php foreach ($theatre as $project): ?>
+                <div class="theatre_description" id="<? $project->getIdTheatre();?>">
+                    <ul>
+                        <li>
+                            <a href="#" ><h1><?= $project->getName(); ?></h1></a>
+                            <p>Miasto: <?= $project->getCity(); ?></p>
+                            <p>Ulica: <?= $project->getStreet()." ". $project->getNumber(); ?></p>
+                        </li>
 
-            </dl>
+                    </ul>
+                </div>
+            <?php endforeach; ?>
         </section>
     </div>
 </body>
-
-
-</html>
